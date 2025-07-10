@@ -1,0 +1,4 @@
+displayName = Epic Jam Mod of Cool
+author = usetoconfuse &amp; MadLad99
+version = 0.1
+includeSource = true
