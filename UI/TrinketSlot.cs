@@ -10,8 +10,7 @@ namespace IsaacTrinkets.UI
 	public class TrinketSlot : ModAccessorySlot
 	{
 		public static LocalizedText TrinketSlotText { get; private set; }
-
-		public override Vector2? CustomLocation => new Vector2(4 * Main.EquipPage / 5, 3 * Main.screenHeight / 4);
+		public override Vector2? CustomLocation => new Vector2(AccessorySlotLoader.DefenseIconPosition.X -141, AccessorySlotLoader.DrawVerticalAlignment + 242);
 
 		public override bool DrawVanitySlot => false;
 		public override bool DrawDyeSlot => false;
