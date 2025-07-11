@@ -37,11 +37,11 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 		{
 			if (modded)
 			{
-				int moddedSlot = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<TrinketSlot>().Type, player).Type;
+				int trinketSlot = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<TrinketSlot>().Type, player).Type;
 
 				//Main.NewText("Modded slot: " + moddedSlot.ToString() + ", Selected slot: " + slot.ToString(), 255, 255, 255);
 
-				if (moddedSlot == slot)
+				if (trinketSlot == slot)
 				{
 					return true;
 				}
