@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using IsaacTrinkets.UI;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -37,7 +38,10 @@ namespace IsaacTrinkets.Content.Items
 			int equipableIndex = tooltips.FindIndex(line => line.Mod == "Terraria" && line.Name == "Equipable");
 			tooltips[equipableIndex].Hide();
 			
-			TooltipLine trinketTooltip = new TooltipLine(Mod, "Trinket", "Trinket");
+			TooltipLine trinketTooltip = new TooltipLine(Mod, "Trinket", "- Trinket -")
+			{
+				OverrideColor = new Color(113, 232, 245)
+			};
 			tooltips.Insert(equipableIndex, trinketTooltip);
 		}
 
