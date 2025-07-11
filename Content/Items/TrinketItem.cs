@@ -33,7 +33,7 @@ namespace IsaacTrinkets.Content.Items
 			Item.accessory = true;
 		}
 
-		// Find the location of the "Equipable" tooltip in the tooltip list for the trinket, then replace it with "Trinket"
+		// Replace the "Equipable" tooltip text with "Trinket"
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
 			int equipableIndex = tooltips.FindIndex(line => line.Mod == "Terraria" && line.Name == "Equipable");
