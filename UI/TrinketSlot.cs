@@ -15,7 +15,6 @@ namespace IsaacTrinkets.UI
 		
 		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
 		{
-
 			ModItem thisItem = ItemLoader.GetItem(checkItem.type);
 
 			if (thisItem != null)
@@ -31,6 +30,19 @@ namespace IsaacTrinkets.UI
 		public override void SetupContent()
 		{
 			TrinketSlotText = Mod.GetLocalization($"{nameof(TrinketSlot)}.Trinket");
+		}
+
+		public override bool ModifyDefaultSwapSlot(Item item, int accSlotToSwapTo) {
+			ModItem thisItem = ItemLoader.GetItem(item.type);
+
+			if (thisItem != null)
+			{
+				if (thisItem.ToString().StartsWith("IsaacTrinkets.Content.Items.Trinkets."))
+				{
+					return true;
+				}
+			}
+			return false; // Otherwise nothing in slot
 		}
 
 		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
