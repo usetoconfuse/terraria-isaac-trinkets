@@ -10,6 +10,8 @@ namespace IsaacTrinkets.UI
 	{
 		public static LocalizedText TrinketSlotText { get; private set; }
 
+		public override Vector2? CustomLocation => new Vector2(Main.screenWidth / 2, 3 * Main.screenHeight / 4);
+
 		public override bool DrawVanitySlot => false;
 		public override bool DrawDyeSlot => false;
 		
