@@ -12,6 +12,8 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 		public override void SetDefaults()
 		{
 			base.SetDefaults();
+			Item.width = 40;
+			Item.height = 40;
 			Item.value = Item.buyPrice(silver: 1);
 			Item.rare = ItemRarityID.Blue;
 		}

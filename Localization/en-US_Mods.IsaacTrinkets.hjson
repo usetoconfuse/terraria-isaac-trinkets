@@ -10,6 +10,11 @@ Items: {
 		DisplayName: Test Trinket2
 		Tooltip: ""
 	}
+
+	ShinyRock: {
+		DisplayName: Shiny Rock
+		Tooltip: "It shines for its brothers"
+	}
 }
 
 TrinketSlot.Trinket: Trinket

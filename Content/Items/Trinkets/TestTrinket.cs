@@ -13,6 +13,8 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 		{
 			base.SetDefaults();
 			Item.defense = 10;
+			Item.width = 40;
+			Item.height = 40;
 			Item.value = Item.buyPrice(silver: 1);
 			Item.rare = ItemRarityID.Blue;
 		}

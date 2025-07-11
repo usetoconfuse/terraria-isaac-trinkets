@@ -28,8 +28,6 @@ namespace IsaacTrinkets.Content.Items
 
 		public override void SetDefaults()
 		{
-			Item.width = 40;
-			Item.height = 40;
 			Item.accessory = true;
 		}
 
