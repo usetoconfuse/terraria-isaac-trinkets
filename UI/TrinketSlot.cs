@@ -15,7 +15,7 @@ namespace IsaacTrinkets.UI
 		public override bool DrawVanitySlot => false;
 		public override bool DrawDyeSlot => false;
 
-		public override string FunctionalBackgroundTexture => "Terraria/Images/Inventory_Back13";
+		public override string FunctionalBackgroundTexture => "Terraria/Images/Inventory_Back2";
 
 		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
 		public override string FunctionalTexture => "Terraria/Images/Mana";
