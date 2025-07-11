@@ -1,3 +1,4 @@
+using IsaacTrinkets.UI;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -14,6 +15,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 		{
 			Item.width = 40;
 			Item.height = 40;
+			Item.accessory = true;
 			Item.value = Item.buyPrice(silver: 1);
 			Item.rare = ItemRarityID.Blue;
 		}
@@ -24,6 +26,11 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 			recipe.AddIngredient(ItemID.DirtBlock, 10);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
+		}
+
+		public override bool CanEquipAccessory(Player player, int slot, bool modded)
+		{
+			return (modded); // TODO figure out slot type
 		}
 	}
 }
