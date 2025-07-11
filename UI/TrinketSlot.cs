@@ -1,7 +1,6 @@
 ﻿using IsaacTrinkets.Content.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 

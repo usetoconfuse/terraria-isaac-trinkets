@@ -1,8 +1,5 @@
-using System.Linq;
-using IsaacTrinkets.UI;
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Items.Trinkets
 { 
