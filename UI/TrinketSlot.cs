@@ -23,12 +23,12 @@ namespace IsaacTrinkets.UI
 		
 		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
 		{
-			return TrinketItemSet.Trinket[checkItem.type];
+			return TrinketItem.IsTrinket[checkItem.type];
 		}
 
 		public override bool ModifyDefaultSwapSlot(Item item, int accSlotToSwapTo)
 		{
-			return TrinketItemSet.Trinket[item.type];
+			return TrinketItem.IsTrinket[item.type];
 		}
 
 		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.

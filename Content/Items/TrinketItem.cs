@@ -6,16 +6,24 @@ using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Items.Trinkets
 { 
-	// This is a basic item template.
-	// Please see tModLoader's ExampleMod for every other example:
-	// https://github.com/tModLoader/tModLoader/tree/stable/ExampleMod
+	// This [ReinitializeDuringResizeArrays] attribute will cause this class's static constructor to be called during the ResizeArrays step of mod loading. This is essential for any class with field initializers calling SetFactory methods.
+	// This will allow the arrays to have the correct lengths after all content has been loaded into the game. This reinitialization happens before ModSystem.ResizeArrays, avoiding potential issues from mod load order.
+	[ReinitializeDuringResizeArrays]
 	public abstract class TrinketItem : ModItem
 	{
-		// The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
+		// Named ID set. This will behave the same as any other ItemID.Sets array.
+		public const string TrinketItemCustomSetKey = "IsaacTrinket";
+        
+		// To create a named ID set for items, we use the ItemID.Sets.Factory.CreateNamedSet method and provide a string key.
+		// This is then optionally followed by the Decription method. The description explains how this mod uses the set. Other mods can view this description using the /customsets chat command.
+		// By registering the set, other mods can access it the key. The key and default value must be consistent with other mods. Remember that the Mod name is part of the key that that other mods will be using to access this set.
+		public static bool[] IsTrinket = ItemID.Sets.Factory.CreateNamedSet(TrinketItemCustomSetKey)
+			.Description("Indicates that the item is a trinket which can be equipped in the trinket slot.")
+			.RegisterBoolSet(false);
 
 		public override void SetStaticDefaults()
 		{
-			TrinketItemSet.Trinket[Type] = true;
+			IsTrinket[Type] = true;
 		}
 
 		public override void SetDefaults()
