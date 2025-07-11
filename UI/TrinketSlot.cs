@@ -9,7 +9,7 @@ namespace IsaacTrinkets.UI
 	public class TrinketSlot : ModAccessorySlot
 	{
 		// Helper function to check if a ModItem is a TrinketItem
-		private bool IsTrinket(Item checkItem)
+		private static bool IsTrinket(Item checkItem)
 		{
 			ModItem thisItem = ItemLoader.GetItem(checkItem.type);
 
