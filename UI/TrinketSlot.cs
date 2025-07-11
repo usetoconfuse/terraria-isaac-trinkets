@@ -13,7 +13,10 @@ namespace IsaacTrinkets.UI
 		public override bool DrawVanitySlot => false;
 		public override bool DrawDyeSlot => false;
 		
-		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context) {
+		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
+		{
+
+			ModItem thisItem = ItemLoader.GetItem(checkItem.type);
 			
 			if (checkItem.type == ModContent.ItemType<Content.Items.Trinkets.TestTrinket>()) // TODO: Figure out trinket type
 				return true;
