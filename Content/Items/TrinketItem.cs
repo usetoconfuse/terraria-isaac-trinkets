@@ -12,6 +12,12 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 	public abstract class TrinketItem : ModItem
 	{
 		// The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
+
+		public override void SetStaticDefaults()
+		{
+			TrinketItemSet.Trinket[Type] = true;
+		}
+
 		public override void SetDefaults()
 		{
 			Item.width = 40;
