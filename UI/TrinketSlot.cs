@@ -17,10 +17,14 @@ namespace IsaacTrinkets.UI
 		{
 
 			ModItem thisItem = ItemLoader.GetItem(checkItem.type);
-			
-			if (checkItem.type == ModContent.ItemType<Content.Items.Trinkets.TestTrinket>()) // TODO: Figure out trinket type
-				return true;
 
+			if (thisItem != null)
+			{
+				if (thisItem.ToString().StartsWith("IsaacTrinkets.Content.Items.Trinkets."))
+				{
+					return true;
+				}
+			}
 			return false; // Otherwise nothing in slot
 		}
 
