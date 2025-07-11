@@ -1,4 +1,4 @@
-﻿using IsaacTrinkets.Content.Items.Trinkets;
+﻿using IsaacTrinkets.Content.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
