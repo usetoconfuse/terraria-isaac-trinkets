@@ -25,10 +25,6 @@ namespace IsaacTrinkets.UI
 			// We will modify the hover text while an item is not in the slot, so that it says "Wings".
 			switch (context) {
 				case AccessorySlotType.FunctionalSlot:
-				case AccessorySlotType.VanitySlot:
-					Main.hoverItemName = TrinketSlotText.Value;
-					break;
-				case AccessorySlotType.DyeSlot:
 					Main.hoverItemName = TrinketSlotText.Value;
 					break;
 			}
