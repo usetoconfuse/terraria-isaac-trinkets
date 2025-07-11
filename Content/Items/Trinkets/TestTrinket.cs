@@ -1,3 +1,4 @@
+using System.Linq;
 using IsaacTrinkets.UI;
 using Terraria;
 using Terraria.ID;
@@ -30,12 +31,20 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
 		public override bool CanEquipAccessory(Player player, int slot, bool modded)
 		{
-			AccessorySlotLoader loader = new AccessorySlotLoader();
-			ModAccessorySlot thisSlot = loader.Get(slot);
+			if (modded)
+			{
+				int moddedSlot = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<TrinketSlot>().Type, player).Type;
+
+				//Main.NewText("Modded slot: " + moddedSlot.ToString() + ", Selected slot: " + slot.ToString(), 255, 255, 255);
+
+				if (moddedSlot == slot)
+				{
+					return true;
+				}
+			}
 			
-			if (thisSlot.CanAcceptItem(this, AccessorySlotType.FunctionalSlot))
-			
-			return (modded); // TODO figure out slot type
+
+			return false;
 		}
 	}
 }
