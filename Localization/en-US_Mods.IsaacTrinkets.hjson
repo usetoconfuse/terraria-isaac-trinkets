@@ -6,3 +6,5 @@ Items: {
 		Tooltip: My first trinket
 	}
 }
+
+TrinketSlot.Trinket: Trinket
