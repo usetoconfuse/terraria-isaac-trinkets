@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using IsaacTrinkets.UI;
 using Terraria;
@@ -31,6 +32,16 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 			Item.width = 40;
 			Item.height = 40;
 			Item.accessory = true;
+		}
+
+		// Find the location of the "Equipable" tooltip in the tooltip list for the trinket, then replace it with "Trinket"
+		public override void ModifyTooltips(List<TooltipLine> tooltips)
+		{
+			int equipableIndex = tooltips.FindIndex(line => line.Mod == "Terraria" && line.Name == "Equipable");
+			tooltips[equipableIndex].Hide();
+			
+			TooltipLine trinketTooltip = new TooltipLine(Mod, "Trinket", "Trinket");
+			tooltips.Insert(equipableIndex, trinketTooltip);
 		}
 
 		public override bool CanEquipAccessory(Player player, int slot, bool modded)
