@@ -14,6 +14,7 @@ namespace IsaacTrinkets.UI
 		public override bool DrawDyeSlot => false;
 		
 		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context) {
+			
 			if (checkItem.type == ModContent.ItemType<Content.Items.Trinkets.TestTrinket>()) // TODO: Figure out trinket type
 				return true;
 

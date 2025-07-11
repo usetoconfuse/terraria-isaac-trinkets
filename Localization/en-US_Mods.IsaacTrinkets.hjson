@@ -5,6 +5,11 @@ Items: {
 		DisplayName: Test Trinket
 		Tooltip: My first trinket
 	}
+
+	TestTrinket2: {
+		DisplayName: Test Trinket2
+		Tooltip: ""
+	}
 }
 
 TrinketSlot.Trinket: Trinket
