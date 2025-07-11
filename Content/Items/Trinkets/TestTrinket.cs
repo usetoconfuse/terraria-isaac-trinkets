@@ -30,6 +30,11 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
 		public override bool CanEquipAccessory(Player player, int slot, bool modded)
 		{
+			AccessorySlotLoader loader = new AccessorySlotLoader();
+			ModAccessorySlot thisSlot = loader.Get(slot);
+			
+			if (thisSlot.CanAcceptItem(this, AccessorySlotType.FunctionalSlot))
+			
 			return (modded); // TODO figure out slot type
 		}
 	}
