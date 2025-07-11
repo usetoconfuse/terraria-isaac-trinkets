@@ -6,13 +6,12 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 	// This is a basic item template.
 	// Please see tModLoader's ExampleMod for every other example:
 	// https://github.com/tModLoader/tModLoader/tree/stable/ExampleMod
-	public class TestTrinket : TrinketItem
+	public class TestTrinket2 : TrinketItem
 	{
 		// The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
 		public override void SetDefaults()
 		{
 			base.SetDefaults();
-			Item.defense = 10;
 			Item.value = Item.buyPrice(silver: 1);
 			Item.rare = ItemRarityID.Blue;
 		}
