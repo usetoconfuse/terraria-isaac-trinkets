@@ -18,7 +18,7 @@ namespace IsaacTrinkets.UI
 		}
 
 		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
-		public override string FunctionalTexture => "Terraria/Images/Item_" + ItemID.CreativeWings;
+		public override string FunctionalTexture => "Terraria/Images/Mana.png";
 
 		// Can be used to modify stuff while the Mouse is hovering over the slot.
 		public override void OnMouseHover(AccessorySlotType context) {
