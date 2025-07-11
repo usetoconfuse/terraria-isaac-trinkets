@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using System.Linq;
 using IsaacTrinkets.UI;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace IsaacTrinkets.Content.Items.Trinkets
+namespace IsaacTrinkets.Content.Items
 { 
 	// This [ReinitializeDuringResizeArrays] attribute will cause this class's static constructor to be called during the ResizeArrays step of mod loading. This is essential for any class with field initializers calling SetFactory methods.
 	// This will allow the arrays to have the correct lengths after all content has been loaded into the game. This reinitialization happens before ModSystem.ResizeArrays, avoiding potential issues from mod load order.
