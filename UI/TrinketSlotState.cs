@@ -2,7 +2,7 @@
 
 namespace IsaacTrinkets.UI
 {
-    public class TrinketSlotUIState : UIState
+    public class TrinketSlotState : UIState
     {
         public TrinketSlot trinketSlot;
 
