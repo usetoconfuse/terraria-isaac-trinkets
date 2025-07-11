@@ -14,6 +14,11 @@ namespace IsaacTrinkets.UI
 
 		public override bool DrawVanitySlot => false;
 		public override bool DrawDyeSlot => false;
+
+		public override string FunctionalBackgroundTexture => "Terraria/Images/Inventory_Back13";
+
+		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
+		public override string FunctionalTexture => "Terraria/Images/Mana";
 		
 		public override void SetupContent()
 		{
@@ -29,9 +34,6 @@ namespace IsaacTrinkets.UI
 		{
 			return TrinketItem.IsTrinket[item.type];
 		}
-
-		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
-		public override string FunctionalTexture => "Terraria/Images/Mana";
 
 		// Can be used to modify stuff while the Mouse is hovering over the slot.
 		public override void OnMouseHover(AccessorySlotType context) {
