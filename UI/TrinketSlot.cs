@@ -8,14 +8,8 @@ namespace IsaacTrinkets.UI
 {
 	public class TrinketSlot : ModAccessorySlot
 	{
-		public static LocalizedText TrinketSlotText { get; private set; }
-
-		public override Vector2? CustomLocation => new Vector2(Main.screenWidth / 2, 3 * Main.screenHeight / 4);
-
-		public override bool DrawVanitySlot => false;
-		public override bool DrawDyeSlot => false;
-		
-		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
+		// Helper function to check if a ModItem is a TrinketItem
+		private static bool IsTrinket(Item checkItem)
 		{
 			ModItem thisItem = ItemLoader.GetItem(checkItem.type);
 
@@ -26,7 +20,17 @@ namespace IsaacTrinkets.UI
 					return true;
 				}
 			}
-			return false; // Otherwise nothing in slot
+			return false;
+		}
+		
+		public static LocalizedText TrinketSlotText { get; private set; }
+
+		public override bool DrawVanitySlot => false;
+		public override bool DrawDyeSlot => false;
+		
+		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
+		{
+			return IsTrinket(checkItem);
 		}
 
 		public override void SetupContent()
@@ -34,17 +38,9 @@ namespace IsaacTrinkets.UI
 			TrinketSlotText = Mod.GetLocalization($"{nameof(TrinketSlot)}.Trinket");
 		}
 
-		public override bool ModifyDefaultSwapSlot(Item item, int accSlotToSwapTo) {
-			ModItem thisItem = ItemLoader.GetItem(item.type);
-
-			if (thisItem != null)
-			{
-				if (thisItem.ToString().StartsWith("IsaacTrinkets.Content.Items.Trinkets."))
-				{
-					return true;
-				}
-			}
-			return false; // Otherwise nothing in slot
+		public override bool ModifyDefaultSwapSlot(Item item, int accSlotToSwapTo)
+		{
+			return IsTrinket(item);
 		}
 
 		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
