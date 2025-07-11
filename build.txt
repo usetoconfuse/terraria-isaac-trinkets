@@ -1,4 +1,4 @@
-displayName = Epic Jam Mod of Cool
+displayName = Isaac's Trinkets
 author = usetoconfuse &amp; MadLad99
 version = 0.1
 includeSource = true
