@@ -13,7 +13,11 @@ Items: {
 
 	ShinyRock: {
 		DisplayName: Shiny Rock
-		Tooltip: It shines for its brothers
+		Tooltip:
+			'''
+			Exposes nearby treasure
+			'It shines for its brothers'
+			'''
 	}
 }
 
