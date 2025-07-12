@@ -29,6 +29,33 @@ Items: {
 			'I think it's broken'
 			'''
 	}
+
+	MothersKiss: {
+		DisplayName: Mother's Kiss
+		Tooltip:
+			'''
+			+50 max life
+			'HP up'
+			'''
+	}
+
+	AAABattery: {
+		DisplayName: AAA Battery
+		Tooltip:
+			'''
+			Slightly increases mana regeneration
+			'Trickle charge'
+			'''
+	}
+
+	WatchBattery: {
+		DisplayName: Watch Battery
+		Tooltip:
+			'''
+			Enemies drop more mana stars
+			'Lil charge'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

@@ -19,7 +19,7 @@ namespace IsaacTrinkets.Content.Buffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            if (player.GetModPlayer<TrinketPlayer>().vibrantBulb && player.statLife == player.statLifeMax2)
+            if (player.GetModPlayer<TrinketPlayer>().vibrantBulbAcc && player.statLife == player.statLifeMax2)
             {
                 player.statDefense += 4;
                 player.GetDamage(DamageClass.Generic) += 0.04f;
