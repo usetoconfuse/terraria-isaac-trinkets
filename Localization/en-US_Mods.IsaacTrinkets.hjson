@@ -1,22 +1,21 @@
 # This file will automatically update with entries for new content after a build and reload.
 
 Items: {
-	TestTrinket: {
-		DisplayName: Test Trinket
-		Tooltip: My first trinket
-	}
-
-	TestTrinket2: {
-		DisplayName: Test Trinket2
-		Tooltip: ""
-	}
-
 	ShinyRock: {
 		DisplayName: Shiny Rock
 		Tooltip:
 			'''
 			Exposes nearby treasure
 			'It shines for its brothers'
+			'''
+	}
+
+	VibrantBulb: {
+		DisplayName: Vibrant Bulb
+		Tooltip:
+			'''
+			Minor increase to stats while at full health
+			'It needs power'
 			'''
 	}
 }
