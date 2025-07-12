@@ -1,3 +1,4 @@
+using IsaacTrinkets.Content.Buffs;
 using IsaacTrinkets.Players;
 using Terraria;
 using Terraria.ID;
@@ -8,7 +9,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
     // This is a basic item template.
     // Please see tModLoader's ExampleMod for every other example:
     // https://github.com/tModLoader/tModLoader/tree/stable/ExampleMod
-    public class VibrantBulb : TrinketItem
+    public class DimBulb : TrinketItem
     {
         // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
         public override void SetDefaults()
@@ -20,7 +21,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<TrinketPlayer>().vibrantBulb = true;
+            player.GetModPlayer<TrinketPlayer>().dimBulb = true;
         }
     }
 }

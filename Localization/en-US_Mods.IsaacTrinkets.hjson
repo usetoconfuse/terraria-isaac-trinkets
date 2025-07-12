@@ -14,10 +14,33 @@ Items: {
 		DisplayName: Vibrant Bulb
 		Tooltip:
 			'''
-			Minor increase to stats while at full health
+			Minor increase to defense, damage, crit chance,
+			movement speed and luck while at max life
 			'It needs power'
+			'''
+	}
+
+	DimBulb: {
+		DisplayName: Dim Bulb
+		Tooltip:
+			'''
+			Major increase to defense, damage, crit chance,
+			movement speed and luck while below 25% life
+			'I think it's broken'
 			'''
 	}
 }
 
 TrinketSlot.Trinket: Trinket
+
+Buffs: {
+	VibrantBulbBuff: {
+		DisplayName: Vibrant Bulb
+		Description: Minor improvements to some stats
+	}
+
+	DimBulbBuff: {
+		DisplayName: Dim Bulb
+		Description: Major improvements to some stats
+	}
+}
