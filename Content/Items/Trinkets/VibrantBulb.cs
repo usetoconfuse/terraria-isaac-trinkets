@@ -17,8 +17,6 @@ namespace IsaacTrinkets.Content.Items.Trinkets
             Item.rare = ItemRarityID.Blue;
         }
 
-        public byte spelunkerTimer;
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             if (player.statLife == player.statLifeMax2)
