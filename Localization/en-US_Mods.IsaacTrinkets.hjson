@@ -56,6 +56,17 @@ Items: {
 			'Lil charge'
 			'''
 	}
+
+	OldCapacitor: {
+		DisplayName: Old Capacitor
+		Tooltip:
+			'''
+			Mana regen is disabled
+			Hitting enemies with a magic weapon
+			has a chance to spawn mana stars
+			'Voltage starving'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

@@ -10,10 +10,13 @@ namespace IsaacTrinkets.Players
         public bool vibrantBulbAcc;
         public bool dimBulbAcc;
         public bool watchBatteryAcc;
+        public bool oldCapacitorAcc;
 
-        public override void ResetEffects() {
-			watchBatteryAcc = false;
-		}
+        public override void ResetEffects()
+        {
+            watchBatteryAcc = false;
+            oldCapacitorAcc = false;
+        }
 
         public override void PostUpdateBuffs()
         {
