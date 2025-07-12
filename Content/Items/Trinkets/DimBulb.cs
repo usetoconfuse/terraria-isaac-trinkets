@@ -21,12 +21,12 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         {
             if (player.statLife < player.statLifeMax2 * 0.25f)
             {
-                player.statDefense += 8;
-                player.GetDamage(DamageClass.Generic) += 0.08f;
-                player.GetCritChance(DamageClass.Generic) += 8;
+                player.statDefense += 10;
+                player.GetDamage(DamageClass.Generic) += 0.1f;
+                player.GetCritChance(DamageClass.Generic) += 10;
                 player.equipmentBasedLuckBonus += 0.1f;
 
-                player.moveSpeed += 0.1f;
+                player.moveSpeed += 0.15f;
             }
         }
     }
