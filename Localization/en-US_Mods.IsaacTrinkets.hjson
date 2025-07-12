@@ -32,3 +32,15 @@ Items: {
 }
 
 TrinketSlot.Trinket: Trinket
+
+Buffs: {
+	VibrantBulbBuff: {
+		DisplayName: Vibrant Bulb
+		Description: Minor improvements to some stats
+	}
+
+	DimBulbBuff: {
+		DisplayName: Dim Bulb
+		Description: Major improvements to some stats
+	}
+}

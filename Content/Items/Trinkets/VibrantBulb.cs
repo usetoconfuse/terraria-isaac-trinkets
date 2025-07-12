@@ -1,3 +1,4 @@
+using IsaacTrinkets.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,15 +20,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            if (player.statLife == player.statLifeMax2)
-            {
-                player.statDefense += 4;
-                player.GetDamage(DamageClass.Generic) += 0.04f;
-                player.GetCritChance(DamageClass.Generic) += 4;
-                player.equipmentBasedLuckBonus += 0.05f;
-
-                player.moveSpeed += 0.05f;
-            }
+            player.GetModPlayer<TrinketPlayer>().vibrantBulb = true;
         }
     }
 }
