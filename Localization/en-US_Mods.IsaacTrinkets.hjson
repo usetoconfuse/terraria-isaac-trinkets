@@ -38,6 +38,15 @@ Items: {
 			'HP up'
 			'''
 	}
+
+	AAABattery: {
+		DisplayName: AAA Battery
+		Tooltip:
+			'''
+			Slightly increases mana regeneration
+			'Trickle charge'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
