@@ -28,32 +28,8 @@ namespace IsaacTrinkets.Content.Items.Trinkets
                 player.GetCritChance(DamageClass.Generic) += 4;
                 player.equipmentBasedLuckBonus += 0.05f;
 
-                //player.GetModPlayer<VibrantBulbPlayer>().vibrantBulb = true;
                 player.moveSpeed += 0.05f;
             }
-        }
-    }
-
-    public class VibrantBulbPlayer : ModPlayer
-    {
-        public bool vibrantBulb = false;
-
-        public override void ResetEffects()
-        {
-            vibrantBulb = false;
-        }
-
-        public override void PostUpdateRunSpeeds()
-        {
-            if (Player.mount.Active || !vibrantBulb)
-            {
-                return;
-            }
-            
-            Player.runAcceleration *= 1.75f; // Modifies player run acceleration
-			Player.maxRunSpeed *= 1.15f;
-			Player.accRunSpeed *= 1.15f;
-			Player.runSlowdown *= 1.75f;
         }
     }
 }
