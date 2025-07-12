@@ -32,12 +32,17 @@ namespace IsaacTrinkets.Content.Items
 			Item.accessory = true;
 		}
 
+        public override bool CanReforge()
+        {
+			return false;
+        }
+
 		// Replace the "Equipable" tooltip text with "Trinket"
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
 			int equipableIndex = tooltips.FindIndex(line => line.Mod == "Terraria" && line.Name == "Equipable");
 			tooltips[equipableIndex].Hide();
-			
+
 			TooltipLine trinketTooltip = new TooltipLine(Mod, "Trinket", "- Trinket -")
 			{
 				OverrideColor = new Color(113, 232, 245)
