@@ -47,6 +47,15 @@ Items: {
 			'Trickle charge'
 			'''
 	}
+
+	WatchBattery: {
+		DisplayName: Watch Battery
+		Tooltip:
+			'''
+			Enemies drop more mana stars
+			'Lil charge'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

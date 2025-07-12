@@ -20,7 +20,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<TrinketPlayer>().vibrantBulb = true;
+            player.GetModPlayer<TrinketPlayer>().vibrantBulbAcc = true;
         }
     }
 }

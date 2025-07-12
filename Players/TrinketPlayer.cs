@@ -7,21 +7,27 @@ namespace IsaacTrinkets.Players
 {
     public class TrinketPlayer : ModPlayer
     {
-        public bool vibrantBulb = false;
-        public bool dimBulb = false;
+        public bool vibrantBulbAcc;
+        public bool dimBulbAcc;
+        public bool watchBatteryAcc;
+
+        public override void ResetEffects() {
+			watchBatteryAcc = false;
+		}
+
         public override void PostUpdateBuffs()
         {
-            if (vibrantBulb && Player.statLife == Player.statLifeMax2)
+            if (vibrantBulbAcc && Player.statLife == Player.statLifeMax2)
             {
                 Player.AddBuff(ModContent.BuffType<VibrantBulbBuff>(), 60);
             }
-            vibrantBulb = false;
+            vibrantBulbAcc = false;
 
-            if (dimBulb && Player.statLife < Player.statLifeMax2 * 0.25f)
+            if (dimBulbAcc && Player.statLife < Player.statLifeMax2 * 0.25f)
             {
                 Player.AddBuff(ModContent.BuffType<DimBulbBuff>(), 60);
             }
-            dimBulb = false;
+            dimBulbAcc = false;
         }
     }
 }
