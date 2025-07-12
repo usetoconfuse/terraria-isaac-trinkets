@@ -29,6 +29,15 @@ Items: {
 			'I think it's broken'
 			'''
 	}
+
+	MothersKiss: {
+		DisplayName: Mother's Kiss
+		Tooltip:
+			'''
+			+50 max life
+			'HP up'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
