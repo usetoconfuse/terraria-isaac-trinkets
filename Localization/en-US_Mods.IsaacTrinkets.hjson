@@ -62,8 +62,8 @@ Items: {
 		Tooltip:
 			'''
 			Mana regen is disabled
-			Hitting enemies with a magic weapon
-			has a chance to spawn mana stars
+			Enemies have a chance to drop mana stars
+			when hit by a magic projectile
 			'Voltage starving'
 			'''
 	}
