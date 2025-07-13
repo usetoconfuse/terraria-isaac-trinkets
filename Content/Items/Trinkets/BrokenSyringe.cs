@@ -1,11 +1,16 @@
-﻿using IsaacTrinkets.Common;
+using IsaacTrinkets.Players;
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Items.Trinkets
 {
-    public class Hairpin : TrinketItem
+    // This is a basic item template.
+    // Please see tModLoader's ExampleMod for every other example:
+    // https://github.com/tModLoader/tModLoader/tree/stable/ExampleMod
+    public class BrokenSyringe : TrinketItem
     {
+        // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -15,7 +20,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<TrinketPlayer>().hairpinAcc = true;
+            player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc = true;
         }
         public override void AddRecipes()
         {
