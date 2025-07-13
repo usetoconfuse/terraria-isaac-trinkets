@@ -1,14 +1,11 @@
 using IsaacTrinkets.Content.Buffs;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
-using Terraria.DataStructures;
-using IsaacTrinkets.Content.Items.Trinkets;
 
-namespace IsaacTrinkets.Players
+namespace IsaacTrinkets.Common
 {
     public class TrinketPlayer : ModPlayer
     {

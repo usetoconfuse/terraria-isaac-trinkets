@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using IsaacTrinkets.UI;
+using IsaacTrinkets.Common;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;

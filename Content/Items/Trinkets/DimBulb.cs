@@ -1,5 +1,5 @@
 using IsaacTrinkets.Content.Buffs;
-using IsaacTrinkets.Players;
+using IsaacTrinkets.Common;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

@@ -3,10 +3,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using IsaacTrinkets.Players;
+using IsaacTrinkets.Common;
 using Terraria.DataStructures;
+using Terraria.GameContent.ItemDropRules;
 
-namespace IsaacTrinkets.Content.NPCs
+namespace IsaacTrinkets.Common
 {
 	public class TrinketGlobalNPC : GlobalNPC
 	{
