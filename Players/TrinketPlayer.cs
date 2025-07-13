@@ -22,6 +22,7 @@ namespace IsaacTrinkets.Players
         public bool brokenSyringeAcc;
         public int brokenSyringeActiveTimer;
         public bool speedBall;
+        public bool crackedCrownAcc;
 
         public override void ResetEffects()
         {
@@ -30,6 +31,7 @@ namespace IsaacTrinkets.Players
             woodenCrossDodge = false;
             swallowedM80Acc = false;
             speedBall = false;
+            crackedCrownAcc = false;
         }
 
         public override void PostUpdateBuffs()
