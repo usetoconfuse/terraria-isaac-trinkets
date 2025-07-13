@@ -107,7 +107,7 @@ namespace IsaacTrinkets.Players
             }
         }
 
-        // Prevent instant damage from damaging tiles
+        // Prevent instant damage from damaging tiles with callus
         public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable)
         {
             if (callusAcc && damageSource.SourceOtherIndex == 3)
