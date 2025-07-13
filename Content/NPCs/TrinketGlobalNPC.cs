@@ -24,7 +24,8 @@ namespace IsaacTrinkets.Content.NPCs
 			}
 		}
 
-		public override void OnKill(NPC npc) {
+		public override void OnKill(NPC npc)
+		{
 			Player closestPlayer = Main.player[Player.FindClosest(npc.position, npc.width, npc.height)];
 
             if
