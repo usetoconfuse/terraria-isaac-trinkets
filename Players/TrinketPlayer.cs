@@ -1,5 +1,7 @@
 using IsaacTrinkets.Content.Buffs;
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
@@ -13,6 +15,10 @@ namespace IsaacTrinkets.Players
         public bool vibrantBulbAcc;
         public bool dimBulbAcc;
         public bool watchBatteryAcc;
+        public bool callusAcc;
+        public bool cursedSkullAcc;
+        public bool endlessNamelessAcc;
+        public bool hairpinAcc;
         public bool oldCapacitorAcc;
         public bool woodenCrossAcc;
         public bool woodenCrossDodge;
@@ -22,6 +28,10 @@ namespace IsaacTrinkets.Players
         public override void ResetEffects()
         {
             watchBatteryAcc = false;
+            callusAcc = false;
+            cursedSkullAcc = false;
+            endlessNamelessAcc = false;
+            hairpinAcc = false;
             oldCapacitorAcc = false;
             woodenCrossDodge = false;
             swallowedM80Acc = false;
@@ -90,6 +100,22 @@ namespace IsaacTrinkets.Players
                     Main.projectile[num4].Kill();
                 }
             }
+            
+            if (cursedSkullAcc && Player.statLife < Player.statLifeMax2 * 0.1f)
+            {
+                Player.TeleportationPotion();
+            }
+        }
+
+        // Prevent instant damage from damaging tiles
+        public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable)
+        {
+            if (callusAcc && damageSource.SourceOtherIndex == 3)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
