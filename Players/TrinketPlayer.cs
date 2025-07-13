@@ -18,6 +18,7 @@ namespace IsaacTrinkets.Players
         public override void ResetEffects() {
 			watchBatteryAcc = false;
             callusAcc = false;
+            cursedSkullAcc = false;
         }
 
         public override void PostUpdateBuffs()
