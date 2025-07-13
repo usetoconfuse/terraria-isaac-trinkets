@@ -17,7 +17,7 @@ namespace IsaacTrinkets.Players
 
         public override void ResetEffects()
         {
-			watchBatteryAcc = false;
+            watchBatteryAcc = false;
             callusAcc = false;
             cursedSkullAcc = false;
         }
