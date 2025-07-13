@@ -75,6 +75,15 @@ Items: {
 			'Cursed?'
 			'''
 	}
+
+	EndlessNameless: {
+		DisplayName: Endless Nameless
+		Tooltip:
+			'''
+			Consumable items have a 10% chance not to be consumed on use
+			'I'm stuck in a loop...'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

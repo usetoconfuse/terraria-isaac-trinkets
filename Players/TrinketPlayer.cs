@@ -14,12 +14,14 @@ namespace IsaacTrinkets.Players
         public bool watchBatteryAcc;
         public bool callusAcc;
         public bool cursedSkullAcc;
+        public bool endlessNamelessAcc;
 
         public override void ResetEffects()
         {
             watchBatteryAcc = false;
             callusAcc = false;
             cursedSkullAcc = false;
+            endlessNamelessAcc = false;
         }
 
         public override void PostUpdateBuffs()
