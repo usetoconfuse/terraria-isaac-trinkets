@@ -100,10 +100,7 @@ namespace IsaacTrinkets.Players
                     Main.projectile[num4].Kill();
                 }
             }
-        }
-
-        public override void PostHurt(Player.HurtInfo info)
-        {
+            
             if (cursedSkullAcc && Player.statLife < Player.statLifeMax2 * 0.1f)
             {
                 Player.TeleportationPotion();

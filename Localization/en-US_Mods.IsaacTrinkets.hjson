@@ -88,12 +88,12 @@ Items: {
 	Hairpin: {
 		DisplayName: Hairpin
 		Tooltip:
-		    '''
-		    Gain increased damage, critical strike chance and movement speed at the start of a boss fight
-		    'Danger charge'
-		    '''
+			'''
+			Gain increased damage, critical strike chance and movement speed at the start of a boss fight
+			'Danger charge'
+			'''
 	}
-  
+
 	OldCapacitor: {
 		DisplayName: Old Capacitor
 		Tooltip:
@@ -141,6 +141,7 @@ Buffs: {
 	HairpinBuff: {
 		DisplayName: Hairpin
 		Description: Increased attack and movement speed
+	}
 
 	WoodenCrossBuff: {
 		DisplayName: Holy Shield
