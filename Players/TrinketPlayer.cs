@@ -15,6 +15,7 @@ namespace IsaacTrinkets.Players
         public bool callusAcc;
         public bool cursedSkullAcc;
         public bool endlessNamelessAcc;
+        public bool hairpinAcc;
 
         public override void ResetEffects()
         {
@@ -22,6 +23,7 @@ namespace IsaacTrinkets.Players
             callusAcc = false;
             cursedSkullAcc = false;
             endlessNamelessAcc = false;
+            hairpinAcc = false;
         }
 
         public override void PostUpdateBuffs()
