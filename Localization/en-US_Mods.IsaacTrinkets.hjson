@@ -123,6 +123,25 @@ Items: {
 			'Bang!'
 			'''
 	}
+
+	BrokenSyringe: {
+		DisplayName: Broken Syringe
+		Tooltip:
+			'''
+			Occasionally grants random stat bonuses
+			'Mystery medicine'
+			'''
+	}
+
+	CrackedCrown: {
+		DisplayName: Cracked Crown
+		Tooltip:
+			'''
+			Gains 25% of equipped accessory modifiers
+			Stats go here
+			'Stat booster'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
@@ -146,5 +165,30 @@ Buffs: {
 	WoodenCrossBuff: {
 		DisplayName: Holy Shield
 		Description: You will dodge the next attack
+	}
+
+	AdrenalineBuff: {
+		DisplayName: Adrenaline
+		Description: Increased damage scaling with missing life
+	}
+
+	GrowthHormonesBuff: {
+		DisplayName: Growth Hormones
+		Description: Increased damage and movement speed
+	}
+
+	RoidRageBuff: {
+		DisplayName: Roid Rage
+		Description: Increased movement and melee speed
+	}
+
+	SpeedBallBuff: {
+		DisplayName: Speed Ball
+		Description: Increased movement and projectile speed
+	}
+
+	SynthoilBuff: {
+		DisplayName: Synthoil
+		Description: Increased damage and crit chance
 	}
 }

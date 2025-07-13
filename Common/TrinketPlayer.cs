@@ -5,8 +5,8 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
-using Terraria.DataStructures;
 using IsaacTrinkets.Content.Items.Trinkets;
+using System.Collections.Generic;
 
 namespace IsaacTrinkets.Players
 {
@@ -24,6 +24,10 @@ namespace IsaacTrinkets.Players
         public bool woodenCrossDodge;
         public int woodenCrossDodgeTimer;
         public bool swallowedM80Acc;
+        public bool brokenSyringeAcc;
+        public int brokenSyringeActiveTimer;
+        public bool speedBall;
+        public List<int> crackedCrownPrefixList;
 
         public override void ResetEffects()
         {
@@ -35,6 +39,8 @@ namespace IsaacTrinkets.Players
             oldCapacitorAcc = false;
             woodenCrossDodge = false;
             swallowedM80Acc = false;
+            speedBall = false;
+            crackedCrownPrefixList = new List<int>();
         }
 
         public override void PostUpdateBuffs()
@@ -65,6 +71,36 @@ namespace IsaacTrinkets.Players
             {
                 woodenCrossDodgeTimer--;
             }
+
+            if (brokenSyringeAcc && brokenSyringeActiveTimer == 0 && Main.rand.NextBool(1000))
+            {
+                int randomBuffIndex = Main.rand.Next(5);
+                int randomDuration = (int)(60f * (float)Main.rand.Next(60, 120) * 0.1f);
+                switch (randomBuffIndex)
+                {
+                    case 0:
+                        Player.AddBuff(ModContent.BuffType<AdrenalineBuff>(), randomDuration);
+                        break;
+                    case 1:
+                        Player.AddBuff(ModContent.BuffType<GrowthHormonesBuff>(), randomDuration);
+                        break;
+                    case 2:
+                        Player.AddBuff(ModContent.BuffType<RoidRageBuff>(), randomDuration);
+                        break;
+                    case 3:
+                        Player.AddBuff(ModContent.BuffType<SpeedBallBuff>(), randomDuration);
+                        break;
+                    case 4:
+                        Player.AddBuff(ModContent.BuffType<SynthoilBuff>(), randomDuration);
+                        break;
+                }
+                brokenSyringeActiveTimer = randomDuration;
+            }
+            if (brokenSyringeActiveTimer > 0)
+            {
+                brokenSyringeActiveTimer--;
+            }
+            brokenSyringeAcc = false;
         }
 
         public override bool ConsumableDodge(Player.HurtInfo info)
@@ -116,6 +152,14 @@ namespace IsaacTrinkets.Players
             }
 
             return false;
+        }
+
+        public override void ModifyShootStats(Item item, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            if (speedBall)
+            {
+                velocity *= 1.2f;
+            }
         }
     }
 }
