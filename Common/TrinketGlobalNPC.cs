@@ -1,11 +1,8 @@
 using IsaacTrinkets.Content.Buffs;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.ModLoader.IO;
-using IsaacTrinkets.Common;
-using Terraria.DataStructures;
-using Terraria.GameContent.ItemDropRules;
 
 namespace IsaacTrinkets.Common
 {

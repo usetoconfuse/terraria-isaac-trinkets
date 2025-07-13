@@ -1,11 +1,11 @@
+using System.Collections.Generic;
 using IsaacTrinkets.Content.Buffs;
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
-using IsaacTrinkets.Content.Items.Trinkets;
-using System.Collections.Generic;
 
 namespace IsaacTrinkets.Common
 {

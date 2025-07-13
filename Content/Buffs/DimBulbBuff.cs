@@ -1,6 +1,5 @@
 using IsaacTrinkets.Common;
 using Terraria;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs

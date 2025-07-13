@@ -124,16 +124,15 @@ Items: {
 			'''
 	}
 
-
 	BrainWorm: {
 		DisplayName: Brain Worm
 		Tooltip:
-		    '''
-		    50% chance for projectiles to redirect themselves towards enemies
-		    'Ding!'
-		    '''
-  }
-  
+			'''
+			50% chance for projectiles to redirect themselves towards enemies
+			'Ding!'
+			'''
+	}
+
 	BrokenSyringe: {
 		DisplayName: Broken Syringe
 		Tooltip:
