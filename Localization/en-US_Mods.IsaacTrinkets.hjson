@@ -123,6 +123,15 @@ Items: {
 			'Bang!'
 			'''
 	}
+
+	BrainWorm: {
+		DisplayName: Brain Worm
+		Tooltip:
+		    '''
+		    50% chance for projectiles to redirect themselves towards enemies
+		    'Ding!'
+		    '''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

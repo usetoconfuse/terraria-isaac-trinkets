@@ -16,6 +16,7 @@ namespace IsaacTrinkets.Common
         public bool cursedSkullAcc;
         public bool endlessNamelessAcc;
         public bool hairpinAcc;
+        public bool brainWormAcc;
         public bool oldCapacitorAcc;
         public bool woodenCrossAcc;
         public bool woodenCrossDodge;
@@ -29,6 +30,7 @@ namespace IsaacTrinkets.Common
             cursedSkullAcc = false;
             endlessNamelessAcc = false;
             hairpinAcc = false;
+            brainWormAcc = false;
             oldCapacitorAcc = false;
             woodenCrossDodge = false;
             swallowedM80Acc = false;
