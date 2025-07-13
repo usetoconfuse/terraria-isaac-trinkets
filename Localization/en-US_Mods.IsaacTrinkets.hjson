@@ -56,6 +56,16 @@ Items: {
 			'Lil charge'
 			'''
 	}
+
+	Callus: {
+		DisplayName: Callus
+		Tooltip:
+			'''
+			Prevents damage from spiky objects
+			Does not prevent bleeding caused by spikes
+			'Your feet feel stronger'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

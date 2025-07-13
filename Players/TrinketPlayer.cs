@@ -1,5 +1,7 @@
 using IsaacTrinkets.Content.Buffs;
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -10,10 +12,12 @@ namespace IsaacTrinkets.Players
         public bool vibrantBulbAcc;
         public bool dimBulbAcc;
         public bool watchBatteryAcc;
+        public bool callusAcc;
 
         public override void ResetEffects() {
 			watchBatteryAcc = false;
-		}
+            callusAcc = false;
+        }
 
         public override void PostUpdateBuffs()
         {
@@ -28,6 +32,17 @@ namespace IsaacTrinkets.Players
                 Player.AddBuff(ModContent.BuffType<DimBulbBuff>(), 60);
             }
             dimBulbAcc = false;
+        }
+
+        // Prevent instant damage from damaging tiles
+        public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable)
+        {
+            if (callusAcc && damageSource.SourceOtherIndex == 3)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
