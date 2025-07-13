@@ -2,7 +2,7 @@ using IsaacTrinkets.Content.Buffs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
+using Terraria.Audio;
 
 namespace IsaacTrinkets.Players
 {
@@ -61,6 +61,7 @@ namespace IsaacTrinkets.Players
                 Player.SetImmuneTimeForAllTypes(Player.longInvince ? 120 : 80);
                 Player.ClearBuff(ModContent.BuffType<WoodenCrossBuff>());
                 Player.shadowDodgeTimer = 1800;
+                SoundEngine.PlaySound(new SoundStyle("IsaacTrinkets/Assets/Sounds/HolyShield") with { Type = SoundType.Sound }, Player.position);
                 NetMessage.SendData(MessageID.Dodge, -1, -1, null, Player.whoAmI, 2f);
                 return true;
             }
