@@ -1,6 +1,6 @@
+using IsaacTrinkets.Common;
 using Terraria;
 using Terraria.ID;
-using IsaacTrinkets.Players;
 
 namespace IsaacTrinkets.Content.Items.Trinkets
 {

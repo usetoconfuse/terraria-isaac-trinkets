@@ -1,5 +1,4 @@
-﻿using IsaacTrinkets.Players;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs

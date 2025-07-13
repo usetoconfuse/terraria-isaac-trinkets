@@ -1,14 +1,13 @@
+using System.Collections.Generic;
 using IsaacTrinkets.Content.Buffs;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
-using IsaacTrinkets.Content.Items.Trinkets;
-using System.Collections.Generic;
 
-namespace IsaacTrinkets.Players
+namespace IsaacTrinkets.Common
 {
     public class TrinketPlayer : ModPlayer
     {
@@ -19,6 +18,7 @@ namespace IsaacTrinkets.Players
         public bool cursedSkullAcc;
         public bool endlessNamelessAcc;
         public bool hairpinAcc;
+        public bool brainWormAcc;
         public bool oldCapacitorAcc;
         public bool woodenCrossAcc;
         public bool woodenCrossDodge;
@@ -36,6 +36,7 @@ namespace IsaacTrinkets.Players
             cursedSkullAcc = false;
             endlessNamelessAcc = false;
             hairpinAcc = false;
+            brainWormAcc = false;
             oldCapacitorAcc = false;
             woodenCrossDodge = false;
             swallowedM80Acc = false;
@@ -143,7 +144,7 @@ namespace IsaacTrinkets.Players
             }
         }
 
-        // Prevent instant damage from damaging tiles
+        // Prevent instant damage from damaging tiles with callus
         public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable)
         {
             if (callusAcc && damageSource.SourceOtherIndex == 3)

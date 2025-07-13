@@ -1,8 +1,6 @@
-﻿using IsaacTrinkets.Players;
+﻿using IsaacTrinkets.Common;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 
 namespace IsaacTrinkets.Content.Items
 {
@@ -12,7 +10,7 @@ namespace IsaacTrinkets.Content.Items
         {
             if (player.GetModPlayer<TrinketPlayer>().endlessNamelessAcc && item.consumable)
             {
-                if (new UnifiedRandom().NextBool(10))
+                if (Main.rand.NextBool(10))
                 {
                     item.stack += 1;
                 }
