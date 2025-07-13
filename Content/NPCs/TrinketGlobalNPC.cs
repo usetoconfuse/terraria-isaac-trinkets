@@ -37,6 +37,21 @@ namespace IsaacTrinkets.Content.NPCs
             {
                 Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star);
             }
-		}
+        }
+
+        public override void OnHitByProjectile(NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone)
+        {
+            Player player = Main.player[projectile.owner];
+            if
+            (
+                Main.rand.NextBool(5)
+                && player.statMana < player.statManaMax2
+                && projectile.CountsAsClass(DamageClass.Magic)
+                && player.GetModPlayer<TrinketPlayer>().oldCapacitorAcc
+            )
+            {
+                Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star);
+            }
+        }
 	}
 }
