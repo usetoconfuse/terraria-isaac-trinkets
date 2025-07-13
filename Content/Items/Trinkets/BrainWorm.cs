@@ -17,5 +17,13 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         {
             player.GetModPlayer<TrinketPlayer>().brainWormAcc = true;
         }
+        
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
+            recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.Register();
+        }
     }
 }
