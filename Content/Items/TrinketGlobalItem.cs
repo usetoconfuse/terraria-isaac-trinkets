@@ -12,8 +12,7 @@ namespace IsaacTrinkets.Content.Items
         {
             if (player.GetModPlayer<TrinketPlayer>().endlessNamelessAcc && item.consumable)
             {
-                UnifiedRandom random = new UnifiedRandom();
-                if (random.NextBool(10))
+                if (new UnifiedRandom().NextBool(10))
                 {
                     item.stack += 1;
                 }
