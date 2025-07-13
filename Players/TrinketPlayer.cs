@@ -13,8 +13,8 @@ namespace IsaacTrinkets.Players
         public bool watchBatteryAcc;
         public bool oldCapacitorAcc;
         public bool woodenCrossAcc;
-
         public bool woodenCrossDodge;
+        public int woodenCrossDodgeTimer;
 
         public override void ResetEffects()
         {
@@ -37,15 +37,20 @@ namespace IsaacTrinkets.Players
             }
             dimBulbAcc = false;
 
-            if (woodenCrossAcc && Player.shadowDodgeTimer == 0)
+            if (woodenCrossAcc && woodenCrossDodgeTimer == 0 && Player.shadowDodgeTimer == 0)
             {
                 if (!woodenCrossDodge)
                 {
+                    woodenCrossDodgeTimer = 5400;
                     Player.shadowDodgeTimer = 1800;
                 }
-                Player.AddBuff(ModContent.BuffType<WoodenCrossBuff>(), 1800);
+                Player.AddBuff(ModContent.BuffType<WoodenCrossBuff>(), 5400);
             }
             woodenCrossAcc = false;
+            if (woodenCrossDodgeTimer > 0)
+            {
+                woodenCrossDodgeTimer--;
+            }
         }
 
         public override bool ConsumableDodge(Player.HurtInfo info)
@@ -60,6 +65,7 @@ namespace IsaacTrinkets.Players
             {
                 Player.SetImmuneTimeForAllTypes(Player.longInvince ? 120 : 80);
                 Player.ClearBuff(ModContent.BuffType<WoodenCrossBuff>());
+                woodenCrossDodgeTimer = 5400;
                 Player.shadowDodgeTimer = 1800;
                 SoundEngine.PlaySound(new SoundStyle("IsaacTrinkets/Assets/Sounds/HolyShield") with { Type = SoundType.Sound }, Player.position);
                 NetMessage.SendData(MessageID.Dodge, -1, -1, null, Player.whoAmI, 2f);
