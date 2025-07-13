@@ -8,13 +8,15 @@ namespace IsaacTrinkets.Content.Items
 {
     public class TrinketGlobalItem : GlobalItem
     {
-        public override void UpdateAccessory(Item item, Player player, bool hideVisual)
+        public override void OnConsumeItem(Item item, Player player)
         {
-            if (player.GetModPlayer<TrinketPlayer>().crackedCrownAcc)
+            if (player.GetModPlayer<TrinketPlayer>().endlessNamelessAcc && item.consumable)
             {
-                int prefix = item.prefix;
+                if (new UnifiedRandom().NextBool(10))
+                {
+                    item.stack += 1;
+                }
             }
         }
-
     }
 }

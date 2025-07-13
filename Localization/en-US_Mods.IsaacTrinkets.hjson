@@ -57,6 +57,43 @@ Items: {
 			'''
 	}
 
+	Callus: {
+		DisplayName: Callus
+		Tooltip:
+			'''
+			Prevents damage from spiky objects
+			Does not prevent bleeding caused by spikes
+			'Your feet feel stronger'
+			'''
+	}
+
+	CursedSkull: {
+		DisplayName: Cursed Skull
+		Tooltip:
+			'''
+			Teleport to a random location when a hit leaves you below 10% of your maximum life
+			'Cursed?'
+			'''
+	}
+
+	EndlessNameless: {
+		DisplayName: Endless Nameless
+		Tooltip:
+			'''
+			Consumable items have a 10% chance not to be consumed on use
+			'I'm stuck in a loop...'
+			'''
+	}
+
+	Hairpin: {
+		DisplayName: Hairpin
+		Tooltip:
+			'''
+			Gain increased damage, critical strike chance and movement speed at the start of a boss fight
+			'Danger charge'
+			'''
+	}
+
 	OldCapacitor: {
 		DisplayName: Old Capacitor
 		Tooltip:
@@ -108,6 +145,11 @@ Buffs: {
 	DimBulbBuff: {
 		DisplayName: Dim Bulb
 		Description: Major improvements to some stats
+	}
+
+	HairpinBuff: {
+		DisplayName: Hairpin
+		Description: Increased attack and movement speed
 	}
 
 	WoodenCrossBuff: {
