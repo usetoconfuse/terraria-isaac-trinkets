@@ -129,7 +129,17 @@ Items: {
 		Tooltip:
 			'''
 			Occasionally grants random stat bonuses
-			'Mystery Medicine'
+			'Mystery medicine'
+			'''
+	}
+
+	CrackedCrown: {
+		DisplayName: Cracked Crown
+		Tooltip:
+			'''
+			Gains 25% of equipped accessory modifiers
+			Stats go here
+			'Stat booster'
 			'''
 	}
 }

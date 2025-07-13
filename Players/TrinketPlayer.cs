@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
 using IsaacTrinkets.Content.Items.Trinkets;
+using System.Collections.Generic;
 
 namespace IsaacTrinkets.Players
 {
@@ -26,7 +27,7 @@ namespace IsaacTrinkets.Players
         public bool brokenSyringeAcc;
         public int brokenSyringeActiveTimer;
         public bool speedBall;
-        public bool crackedCrownAcc;
+        public List<int> crackedCrownPrefixList;
 
         public override void ResetEffects()
         {
@@ -39,7 +40,7 @@ namespace IsaacTrinkets.Players
             woodenCrossDodge = false;
             swallowedM80Acc = false;
             speedBall = false;
-            crackedCrownAcc = false;
+            crackedCrownPrefixList = new List<int>();
         }
 
         public override void PostUpdateBuffs()
