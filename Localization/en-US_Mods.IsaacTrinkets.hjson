@@ -72,7 +72,8 @@ Items: {
 		DisplayName: Wooden Cross
 		Tooltip:
 			'''
-			Occasionally grants the ability to dodge attacks
+			Occasionally grants a holy shield that prevents
+			the next instance of damage taken
 			'My faith protects me'
 			'''
 	}
