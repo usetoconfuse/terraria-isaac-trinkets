@@ -18,5 +18,10 @@ namespace IsaacTrinkets.Content.Items
                 }
             }
         }
+
+        public override void UpdateAccessory(Item item, Player player, bool hideVisual)
+        {
+            int prefix = item.prefix;
+        }
     }
 }

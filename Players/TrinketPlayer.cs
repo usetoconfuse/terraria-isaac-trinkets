@@ -5,9 +5,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
-using Terraria.DataStructures;
 using IsaacTrinkets.Content.Items.Trinkets;
-using Microsoft.Xna.Framework;
 
 namespace IsaacTrinkets.Players
 {
