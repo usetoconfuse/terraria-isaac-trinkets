@@ -1,5 +1,5 @@
 This mod adds a number of Trinkets from The Binding of Isaac, accompanied by a unique Trinket slot to place them in.
 
-All trinkets can be crafted at a Tinkerer's Workbench with 10 iron or lead bars.
+All trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
 
 Made for The first official tModLoader Mod Jam, with the theme 'Game Tribute'.
