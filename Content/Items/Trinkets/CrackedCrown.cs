@@ -121,6 +121,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
+            base.ModifyTooltips(tooltips);
             List<string> tooltiplist = new List<string>();
             if (crownDefense > 0)
             {
@@ -147,7 +148,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
                 tooltiplist.Add("+" + crownMana.ToString() + " maximum mana");
             }
             string tooltip = String.Join(", ", tooltiplist.ToArray());
-            tooltips[3] = new TooltipLine(Mod, "Crown", tooltip);
+            tooltips.Insert(4, new TooltipLine(Mod, "Crown", tooltip));
         }
 
         public override void AddRecipes()
