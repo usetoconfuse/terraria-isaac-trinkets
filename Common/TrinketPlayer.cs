@@ -141,6 +141,7 @@ namespace IsaacTrinkets.Common
             if (cursedSkullAcc && Player.statLife < Player.statLifeMax2 * 0.1f)
             {
                 Player.TeleportationPotion();
+                SoundEngine.PlaySound(new SoundStyle("IsaacTrinkets/Assets/Sounds/Teleport") with { Type = SoundType.Sound }, Player.position);
             }
         }
 
