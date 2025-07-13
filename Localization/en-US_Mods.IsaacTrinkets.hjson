@@ -56,6 +56,36 @@ Items: {
 			'Lil charge'
 			'''
 	}
+
+	OldCapacitor: {
+		DisplayName: Old Capacitor
+		Tooltip:
+			'''
+			Mana regen is disabled
+			Enemies have a chance to drop mana stars
+			when hit by a magic projectile
+			'Voltage starving'
+			'''
+	}
+
+	WoodenCross: {
+		DisplayName: Wooden Cross
+		Tooltip:
+			'''
+			Occasionally grants a holy shield that prevents
+			the next instance of damage taken
+			'My faith protects me'
+			'''
+	}
+
+	SwallowedM80: {
+		DisplayName: Swallowed M80
+		Tooltip:
+			'''
+			The holder explodes upon taking damage
+			'Bang!'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
@@ -69,5 +99,10 @@ Buffs: {
 	DimBulbBuff: {
 		DisplayName: Dim Bulb
 		Description: Major improvements to some stats
+	}
+
+	WoodenCrossBuff: {
+		DisplayName: Holy Shield
+		Description: You will dodge the next attack
 	}
 }
