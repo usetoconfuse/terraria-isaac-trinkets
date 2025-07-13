@@ -12,7 +12,7 @@ namespace IsaacTrinkets.Content.Items
         {
             if (player.GetModPlayer<TrinketPlayer>().endlessNamelessAcc && item.consumable)
             {
-                if (new UnifiedRandom().NextBool(10))
+                if (Main.rand.NextBool(10))
                 {
                     item.stack += 1;
                 }
