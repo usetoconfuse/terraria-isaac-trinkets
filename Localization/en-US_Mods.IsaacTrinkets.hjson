@@ -77,6 +77,15 @@ Items: {
 			'My faith protects me'
 			'''
 	}
+
+	SwallowedM80: {
+		DisplayName: Swallowed M80
+		Tooltip:
+			'''
+			The holder explodes upon taking damage
+			'Bang!'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

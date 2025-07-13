@@ -3,6 +3,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
+using Terraria.DataStructures;
+using IsaacTrinkets.Content.Items.Trinkets;
 
 namespace IsaacTrinkets.Players
 {
@@ -15,12 +17,14 @@ namespace IsaacTrinkets.Players
         public bool woodenCrossAcc;
         public bool woodenCrossDodge;
         public int woodenCrossDodgeTimer;
+        public bool swallowedM80Acc;
 
         public override void ResetEffects()
         {
             watchBatteryAcc = false;
             oldCapacitorAcc = false;
             woodenCrossDodge = false;
+            swallowedM80Acc = false;
         }
 
         public override void PostUpdateBuffs()
@@ -72,6 +76,20 @@ namespace IsaacTrinkets.Players
                 return true;
             }
             return false;
+        }
+
+        public override void PostHurt(Player.HurtInfo info)
+        {
+            if (swallowedM80Acc)
+            {
+                if (Player.whoAmI == Main.myPlayer)
+                {
+                    IEntitySource projectileSource_Misc = Player.GetSource_FromThis();
+                    int num4 = Projectile.NewProjectile(projectileSource_Misc, Player.Center.X, Player.Center.Y, 0f, 0f, 608, 100, 15f, Main.myPlayer);
+                    Main.projectile[num4].netUpdate = true;
+                    Main.projectile[num4].Kill();
+                }
+            }
         }
     }
 }
