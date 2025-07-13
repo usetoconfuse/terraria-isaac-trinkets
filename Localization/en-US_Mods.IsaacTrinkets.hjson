@@ -66,6 +66,15 @@ Items: {
 			'Your feet feel stronger'
 			'''
 	}
+
+	CursedSkull: {
+		DisplayName: Cursed Skull
+		Tooltip:
+			'''
+			Teleport to a random location when a hit leaves you below 10% of your maximum life
+			'Cursed?'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket

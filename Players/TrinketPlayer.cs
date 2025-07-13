@@ -13,6 +13,7 @@ namespace IsaacTrinkets.Players
         public bool dimBulbAcc;
         public bool watchBatteryAcc;
         public bool callusAcc;
+        public bool cursedSkullAcc;
 
         public override void ResetEffects() {
 			watchBatteryAcc = false;
@@ -32,6 +33,14 @@ namespace IsaacTrinkets.Players
                 Player.AddBuff(ModContent.BuffType<DimBulbBuff>(), 60);
             }
             dimBulbAcc = false;
+        }
+
+        public override void PostHurt(Player.HurtInfo info)
+        {
+            if (cursedSkullAcc && Player.statLife < Player.statLifeMax2 * 0.1f)
+            {
+                Player.TeleportationPotion();
+            }
         }
 
         // Prevent instant damage from damaging tiles
