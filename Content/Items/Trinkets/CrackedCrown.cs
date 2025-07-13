@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks.Dataflow;
-using IsaacTrinkets.Players;
+using IsaacTrinkets.Common;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

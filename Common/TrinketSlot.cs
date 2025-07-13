@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace IsaacTrinkets.UI
+namespace IsaacTrinkets.Common
 {
 	public class TrinketSlot : ModAccessorySlot
 	{
