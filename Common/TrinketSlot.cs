@@ -17,7 +17,7 @@ namespace IsaacTrinkets.Common
 		public override string FunctionalBackgroundTexture => "Terraria/Images/Inventory_Back2";
 
 		// Icon textures. Nominal image size is 32x32. Will be centered on the slot.
-		public override string FunctionalTexture => "Terraria/Images/Mana";
+		public override string FunctionalTexture => "IsaacTrinkets/Assets/Textures/TrinketSlot";
 		
 		public override void SetupContent()
 		{
