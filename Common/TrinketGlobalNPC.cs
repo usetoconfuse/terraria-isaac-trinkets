@@ -14,7 +14,7 @@ namespace IsaacTrinkets.Common
 		{
 			if (npc.boss)
 			{
-				foreach (Player player in Main.player)
+				foreach (Player player in Main.ActivePlayers)
 				{
 					if (player.GetModPlayer<TrinketPlayer>().hairpinAcc)
 					{

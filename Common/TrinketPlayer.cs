@@ -138,7 +138,7 @@ namespace IsaacTrinkets.Common
                 if (Player.whoAmI == Main.myPlayer)
                 {
                     IEntitySource projectileSource_Misc = Player.GetSource_FromThis();
-                    int num4 = Projectile.NewProjectile(projectileSource_Misc, Player.Center.X, Player.Center.Y, 0f, 0f, 608, 100, 15f, Main.myPlayer);
+                    int num4 = Projectile.NewProjectile(projectileSource_Misc, Player.Center.X, Player.Center.Y, 0f, 0f, ProjectileID.SolarCounter, 100, 15f, Main.myPlayer);
                     Main.projectile[num4].netUpdate = true;
                     Main.projectile[num4].Kill();
                 }
