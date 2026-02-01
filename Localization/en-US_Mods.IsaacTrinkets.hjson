@@ -167,7 +167,7 @@ Buffs: {
 
 	HairpinBuff: {
 		DisplayName: Hairpin
-		Description: Increased attack and movement speed
+		Description: Increased damage, crit chance, and movement speed
 	}
 
 	WoodenCrossBuff: {
