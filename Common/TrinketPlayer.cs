@@ -46,18 +46,21 @@ namespace IsaacTrinkets.Common
 
         public override void PostUpdateBuffs()
         {
+            // Vibrant Bulb
             if (vibrantBulbAcc && Player.statLife == Player.statLifeMax2)
             {
                 Player.AddBuff(ModContent.BuffType<VibrantBulbBuff>(), 60);
             }
             vibrantBulbAcc = false;
 
+            // Dim Bulb
             if (dimBulbAcc && Player.statLife < Player.statLifeMax2 * 0.25f)
             {
                 Player.AddBuff(ModContent.BuffType<DimBulbBuff>(), 60);
             }
             dimBulbAcc = false;
 
+            // Wooden Cross
             if (woodenCrossAcc && woodenCrossDodgeTimer == 0 && Player.shadowDodgeTimer == 0)
             {
                 if (!woodenCrossDodge)
@@ -73,6 +76,7 @@ namespace IsaacTrinkets.Common
                 woodenCrossDodgeTimer--;
             }
 
+            // Broken Syringe
             if (brokenSyringeAcc && brokenSyringeActiveTimer == 0 && Main.rand.NextBool(1000))
             {
                 int randomBuffIndex = Main.rand.Next(5);
@@ -104,6 +108,7 @@ namespace IsaacTrinkets.Common
             brokenSyringeAcc = false;
         }
 
+        // Wooden Cross
         public override bool ConsumableDodge(Player.HurtInfo info)
         {
             if
@@ -127,6 +132,7 @@ namespace IsaacTrinkets.Common
 
         public override void PostHurt(Player.HurtInfo info)
         {
+            // Swallowed M80
             if (swallowedM80Acc)
             {
                 if (Player.whoAmI == Main.myPlayer)
@@ -138,6 +144,7 @@ namespace IsaacTrinkets.Common
                 }
             }
             
+            // Cursed Skull
             if (cursedSkullAcc && Player.statLife < Player.statLifeMax2 * 0.1f)
             {
                 Player.TeleportationPotion();
@@ -155,6 +162,7 @@ namespace IsaacTrinkets.Common
             return false;
         }
 
+        // Broken Syringe
         public override void ModifyShootStats(Item item, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             if (speedBall)

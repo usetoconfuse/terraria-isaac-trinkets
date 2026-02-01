@@ -8,6 +8,8 @@ namespace IsaacTrinkets.Common
 {
 	public class TrinketGlobalNPC : GlobalNPC
 	{
+
+        // Hairpin
 		public override void OnSpawn(NPC npc, IEntitySource source)
 		{
 			if (npc.boss)
@@ -22,6 +24,7 @@ namespace IsaacTrinkets.Common
 			}
 		}
 
+        // Watch Battery
 		public override void OnKill(NPC npc)
 		{
 			Player closestPlayer = Main.player[Player.FindClosest(npc.position, npc.width, npc.height)];
@@ -37,6 +40,7 @@ namespace IsaacTrinkets.Common
             }
         }
 
+        // Old Capacitor
         public override void OnHitByProjectile(NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.player[projectile.owner];
