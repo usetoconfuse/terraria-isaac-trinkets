@@ -20,6 +20,10 @@ namespace IsaacTrinkets.Common
 					{
 						player.AddBuff(ModContent.BuffType<HairpinBuff>(), 30 * 60);
 					}
+                    if (player.GetModPlayer<TrinketPlayer>().tickAcc)
+					{
+						npc.life -= (int)(npc.lifeMax * 0.15f);
+					}
 				}
 			}
 		}

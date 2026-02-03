@@ -36,7 +36,6 @@ namespace IsaacTrinkets.Common
 
 		// Can be used to modify stuff while the Mouse is hovering over the slot.
 		public override void OnMouseHover(AccessorySlotType context) {
-			// We will modify the hover text while an item is not in the slot, so that it says "Wings".
 			Main.hoverItemName = TrinketSlotText.Value;
 		}
 	}

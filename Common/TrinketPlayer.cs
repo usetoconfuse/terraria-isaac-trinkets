@@ -28,6 +28,7 @@ namespace IsaacTrinkets.Common
         public int brokenSyringeActiveTimer;
         public bool speedBall;
         public List<int> crackedCrownPrefixList;
+        public bool tickAcc;
 
         public override void ResetEffects()
         {
@@ -42,6 +43,7 @@ namespace IsaacTrinkets.Common
             swallowedM80Acc = false;
             speedBall = false;
             crackedCrownPrefixList = new List<int>();
+            tickAcc = false;
         }
 
         public override void PostUpdateBuffs()

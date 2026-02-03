@@ -150,6 +150,15 @@ Items: {
 			'Stat booster'
 			'''
 	}
+
+	Tick: {
+		DisplayName: Tick
+		Tooltip:
+			'''
+			Bosses have 15% less health
+			'Well, that's not coming off'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
