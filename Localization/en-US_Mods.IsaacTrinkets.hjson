@@ -159,6 +159,15 @@ Items: {
 			'Well, that's not coming off'
 			'''
 	}
+
+	StemCell: {
+		DisplayName: Stem Cell
+		Tooltip:
+			'''
+			Slightly increases life regeneration
+			'Regen!'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
