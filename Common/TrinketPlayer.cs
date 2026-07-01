@@ -172,7 +172,7 @@ namespace IsaacTrinkets.Common
         {
             if (speedBall)
             {
-                velocity *= 1.2f;
+                velocity *= 1.3f;
             }
         }
 

@@ -168,6 +168,24 @@ Items: {
 			'Regen!'
 			'''
 	}
+
+	WhipWorm: {
+		DisplayName: Whip Worm
+		Tooltip:
+			'''
+			Increases projectile speed
+			'Wooosh!'
+			'''
+	}
+
+	LuckyToe: {
+		DisplayName: Lucky Toe
+		Tooltip:
+			'''
+			Increases luck
+			'Luck up!'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
