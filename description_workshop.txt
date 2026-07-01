@@ -1,6 +1,6 @@
-This mod adds 16 Trinkets from The Binding of Isaac, accompanied by a unique Trinket slot to place them in.
+This mod adds 20 Trinkets from The Binding of Isaac, accompanied by a unique Trinket slot to place them in.
 
-Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
+Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars. (This is a placeholder solution!)
 
 [h2] All Trinkets [/h2]
 
@@ -34,6 +34,10 @@ Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
 	[td]Teleport to a random location when a hit leaves you with less than 10% of your maximum life[/td]
 [/tr]
 [tr]
+	[td]Curved Horn[/td]
+	[td]Slightly increases damage[/td]
+[/tr]
+[tr]
 	[td]Dim Bulb[/td]
 	[td]Major improvements to stats while below 25% of your maximum life[/td]
 [/tr]
@@ -43,7 +47,11 @@ Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
 [/tr]
 [tr]
 	[td]Hairpin[/td]
-	[td]Provides an increase to damage, critical strike chance and movement speed at the start of a boss fight[/td]
+	[td]Provides a temporary stat boost at the start of a boss fight[/td]
+[/tr]
+[tr]
+	[td]Lucky Toe[/td]
+	[td]Increases luck[/td]
 [/tr]
 [tr]
 	[td]Mother's Kiss[/td]
@@ -58,6 +66,10 @@ Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
 	[td]Short-ranged spelunker glowstick effect[/td]
 [/tr]
 [tr]
+	[td]Stem Cell[/td]
+	[td]Slightly increases life regen[/td]
+[/tr]
+[tr]
 	[td]Swallowed M80[/td]
 	[td]Explode upon taking damage[/td]
 [/tr]
@@ -70,10 +82,14 @@ Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
 	[td]Enemies drop more mana stars[/td]
 [/tr]
 [tr]
+	[td]Whip Worm[/td]
+	[td]Increases projectile speed[/td]
+[/tr]
+[tr]
 	[td]Wooden Cross[/td]
 	[td]Occasionally grants a holy shield that prevents the next instance of damage taken[/td]
 [/tr]
 [/table]
 
 
-Made for the first official tModLoader Mod Jam, with the theme 'Game Tribute'.
+Originally made for the first official tModLoader Mod Jam, with the theme 'Game Tribute'.
