@@ -1,8 +1,10 @@
 ﻿using IsaacTrinkets.Content.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.GameContent.Achievements;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.UI;
 
 namespace IsaacTrinkets.Common
 {
@@ -36,7 +38,6 @@ namespace IsaacTrinkets.Common
 
 		// Can be used to modify stuff while the Mouse is hovering over the slot.
 		public override void OnMouseHover(AccessorySlotType context) {
-			// We will modify the hover text while an item is not in the slot, so that it says "Wings".
 			Main.hoverItemName = TrinketSlotText.Value;
 		}
 	}

@@ -9,7 +9,7 @@ namespace IsaacTrinkets.Common
 	public class TrinketGlobalNPC : GlobalNPC
 	{
 
-        // Hairpin
+        // Hairpin & Tick
 		public override void OnSpawn(NPC npc, IEntitySource source)
 		{
 			if (npc.boss)
@@ -19,6 +19,10 @@ namespace IsaacTrinkets.Common
 					if (player.GetModPlayer<TrinketPlayer>().hairpinAcc)
 					{
 						player.AddBuff(ModContent.BuffType<HairpinBuff>(), 30 * 60);
+					}
+                    if (player.GetModPlayer<TrinketPlayer>().tickAcc)
+					{
+						npc.life -= (int)(npc.lifeMax * 0.15f);
 					}
 				}
 			}

@@ -28,6 +28,8 @@ namespace IsaacTrinkets.Common
         public int brokenSyringeActiveTimer;
         public bool speedBall;
         public List<int> crackedCrownPrefixList;
+        public bool tickAcc;
+        public bool stemCellAcc;
 
         public override void ResetEffects()
         {
@@ -42,6 +44,8 @@ namespace IsaacTrinkets.Common
             swallowedM80Acc = false;
             speedBall = false;
             crackedCrownPrefixList = new List<int>();
+            tickAcc = false;
+            stemCellAcc = false;
         }
 
         public override void PostUpdateBuffs()
@@ -168,7 +172,16 @@ namespace IsaacTrinkets.Common
         {
             if (speedBall)
             {
-                velocity *= 1.2f;
+                velocity *= 1.3f;
+            }
+        }
+
+        // Stem Cell
+        public override void UpdateLifeRegen()
+        {
+            if (stemCellAcc)
+            {
+                Player.lifeRegen += 2;
             }
         }
     }

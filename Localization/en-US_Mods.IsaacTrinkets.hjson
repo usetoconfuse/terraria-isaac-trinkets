@@ -150,6 +150,51 @@ Items: {
 			'Stat booster'
 			'''
 	}
+
+	Tick: {
+		DisplayName: Tick
+		Tooltip:
+			'''
+			Bosses have 15% less health
+			'Well, that's not coming off'
+			'''
+	}
+
+	StemCell: {
+		DisplayName: Stem Cell
+		Tooltip:
+			'''
+			Slightly increases life regeneration
+			'Regen!'
+			'''
+	}
+
+	WhipWorm: {
+		DisplayName: Whip Worm
+		Tooltip:
+			'''
+			Increases projectile speed
+			'Wooosh!'
+			'''
+	}
+
+	LuckyToe: {
+		DisplayName: Lucky Toe
+		Tooltip:
+			'''
+			Increases luck
+			'Luck up!'
+			'''
+	}
+
+	CurvedHorn: {
+		DisplayName: Curved Horn
+		Tooltip:
+			'''
+			Slightly increases damage
+			'DMG up'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
