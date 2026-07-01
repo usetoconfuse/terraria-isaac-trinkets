@@ -28,9 +28,6 @@ namespace IsaacTrinkets.Common
 		
 		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
 		{
-			if (Player.GetModPlayer<TrinketPlayer>().tickAcc == true) {
-				return false;
-			}
 			return TrinketItem.IsTrinket[checkItem.type];
 		}
 
