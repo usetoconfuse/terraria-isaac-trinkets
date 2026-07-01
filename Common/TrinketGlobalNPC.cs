@@ -9,7 +9,7 @@ namespace IsaacTrinkets.Common
 	public class TrinketGlobalNPC : GlobalNPC
 	{
 
-        // Hairpin
+        // Hairpin & Tick
 		public override void OnSpawn(NPC npc, IEntitySource source)
 		{
 			if (npc.boss)

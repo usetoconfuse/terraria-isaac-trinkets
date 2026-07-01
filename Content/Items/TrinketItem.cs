@@ -37,6 +37,11 @@ namespace IsaacTrinkets.Content.Items
 			return false;
         }
 
+        public override bool AllowPrefix(int pre)
+        {
+            return false;
+        }
+
 		// Replace the "Equipable" tooltip text with "Trinket"
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{

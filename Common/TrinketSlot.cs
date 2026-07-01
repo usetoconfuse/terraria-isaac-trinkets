@@ -1,8 +1,10 @@
 ﻿using IsaacTrinkets.Content.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.GameContent.Achievements;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.UI;
 
 namespace IsaacTrinkets.Common
 {
@@ -26,6 +28,9 @@ namespace IsaacTrinkets.Common
 		
 		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
 		{
+			if (Player.GetModPlayer<TrinketPlayer>().tickAcc == true) {
+				return false;
+			}
 			return TrinketItem.IsTrinket[checkItem.type];
 		}
 
