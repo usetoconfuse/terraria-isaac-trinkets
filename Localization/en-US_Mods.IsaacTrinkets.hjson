@@ -186,6 +186,15 @@ Items: {
 			'Luck up!'
 			'''
 	}
+
+	CurvedHorn: {
+		DisplayName: Curved Horn
+		Tooltip:
+			'''
+			Slightly increases damage
+			'DMG up'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
