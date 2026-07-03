@@ -213,6 +213,15 @@ Items: {
 			'Speed up'
 			'''
 	}
+
+	Karma: {
+		DisplayName: Karma
+		Tooltip:
+			'''
+			Total NPC happiness increases luck
+			'Karma up'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
