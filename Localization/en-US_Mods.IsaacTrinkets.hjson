@@ -195,6 +195,15 @@ Items: {
 			'DMG up'
 			'''
 	}
+
+	BlindRage: {
+		DisplayName: Blind Rage
+		Tooltip:
+			'''
+			Increases length of invincibility after taking damage
+			'Blind to damage'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
