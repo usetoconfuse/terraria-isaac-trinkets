@@ -204,6 +204,15 @@ Items: {
 			'Blind to damage'
 			'''
 	}
+
+	GoatHoof: {
+		DisplayName: Goat Hoof
+		Tooltip:
+			'''
+			Increases movement speed
+			'Speed up'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
