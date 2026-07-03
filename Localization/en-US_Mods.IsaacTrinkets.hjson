@@ -198,7 +198,11 @@ Items: {
 
 	RedPatch: {
 		DisplayName: Red Patch
-		Tooltip: Has a change to temporarily increase your damage upon taking damage.
+		Tooltip:
+			'''
+			Has a chance to temporarily increase your damage upon being hit.
+			'Your rage grows'
+			'''
 	}
 }
 
