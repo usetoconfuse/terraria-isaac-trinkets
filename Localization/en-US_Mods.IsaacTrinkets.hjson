@@ -220,9 +220,9 @@ Items: {
 			'''
 			Total NPC happiness increases luck
 			'Karma up'
-      '''
-  }
-  
+			'''
+	}
+
 	RedPatch: {
 		DisplayName: Red Patch
 		Tooltip:
