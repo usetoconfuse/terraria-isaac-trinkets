@@ -4,33 +4,25 @@ using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs
 {
-	public class VibrantBulbBuff : ModBuff
+	public class VibrantBulbBuff : TrinketBuff
 	{
-        public override bool RightClick(int buffIndex)
-        {
-            return false;
-        }
-
         public override void SetStaticDefaults()
         {
             Main.buffNoTimeDisplay[Type] = true;
         }
 
-        public override void Update(Player player, ref int buffIndex)
+        public override bool GetTrinketBool(Player player)
         {
-            if (player.GetModPlayer<TrinketPlayer>().vibrantBulbAcc && player.statLife == player.statLifeMax2)
-            {
-                player.statDefense += 4;
-                player.GetDamage(DamageClass.Generic) += 0.04f;
-                player.GetCritChance(DamageClass.Generic) += 4;
-                player.equipmentBasedLuckBonus += 0.05f;
-                player.moveSpeed += 0.05f;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            return player.GetModPlayer<TrinketPlayer>().vibrantBulbAcc && player.statLife == player.statLifeMax2;
+        }
+
+        public override void BuffEffect(Player player)
+        {
+            player.statDefense += 4;
+            player.GetDamage(DamageClass.Generic) += 0.04f;
+            player.GetCritChance(DamageClass.Generic) += 4;
+            player.equipmentBasedLuckBonus += 0.05f;
+            player.moveSpeed += 0.05f;
         }
 	}
 }

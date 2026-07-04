@@ -1,16 +1,18 @@
-﻿using Terraria;
+﻿using IsaacTrinkets.Common;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs
 {
-    public class HairpinBuff : ModBuff
+    public class HairpinBuff : TrinketBuff
     {
-        public override bool RightClick(int buffIndex)
+
+        public override bool GetTrinketBool(Player player)
         {
-            return false;
+            return player.GetModPlayer<TrinketPlayer>().hairpinAcc;
         }
 
-        public override void Update(Player player, ref int buffIndex)
+        public override void BuffEffect(Player player)
         {
             player.GetDamage(DamageClass.Generic) += 0.15f;
             player.GetCritChance(DamageClass.Generic) += 5;

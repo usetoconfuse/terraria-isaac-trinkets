@@ -17,6 +17,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         {
             player.GetModPlayer<TrinketPlayer>().hairpinAcc = true;
         }
+
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

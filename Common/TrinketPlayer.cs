@@ -38,7 +38,6 @@ namespace IsaacTrinkets.Common
             callusAcc = false;
             cursedSkullAcc = false;
             endlessNamelessAcc = false;
-            hairpinAcc = false;
             brainWormAcc = false;
             oldCapacitorAcc = false;
             woodenCrossDodge = false;
@@ -51,6 +50,10 @@ namespace IsaacTrinkets.Common
 
         public override void PostUpdateBuffs()
         {
+            // Buff-related trinkets should be set to false here
+            redPatchAcc = false;
+            hairpinAcc = false;
+
             // Vibrant Bulb
             if (vibrantBulbAcc && Player.statLife == Player.statLifeMax2)
             {
@@ -70,22 +73,24 @@ namespace IsaacTrinkets.Common
             {
                 if (!woodenCrossDodge)
                 {
-                    woodenCrossDodgeTimer = 5400;
+                    woodenCrossDodgeTimer = Main.rand.Next(3600, 7200);
                     Player.shadowDodgeTimer = 1800;
                 }
-                Player.AddBuff(ModContent.BuffType<WoodenCrossBuff>(), 5400);
+                Player.AddBuff(ModContent.BuffType<WoodenCrossBuff>(), woodenCrossDodgeTimer);
             }
-            woodenCrossAcc = false;
+
             if (woodenCrossDodgeTimer > 0)
             {
                 woodenCrossDodgeTimer--;
             }
+            
+            woodenCrossAcc = false;
 
             // Broken Syringe
             if (brokenSyringeAcc && brokenSyringeActiveTimer == 0 && Main.rand.NextBool(1000))
             {
                 int randomBuffIndex = Main.rand.Next(5);
-                int randomDuration = Main.rand.Next(360, 720);
+                int randomDuration = Main.rand.Next(600, 1200);
                 switch (randomBuffIndex)
                 {
                     case 0:
@@ -126,7 +131,7 @@ namespace IsaacTrinkets.Common
             {
                 Player.SetImmuneTimeForAllTypes(Player.longInvince ? 120 : 80);
                 Player.ClearBuff(ModContent.BuffType<WoodenCrossBuff>());
-                woodenCrossDodgeTimer = 5400;
+                woodenCrossDodgeTimer = Main.rand.Next(3600, 7200);
                 Player.shadowDodgeTimer = 1800;
                 SoundEngine.PlaySound(new SoundStyle("IsaacTrinkets/Assets/Sounds/HolyShield") with { Type = SoundType.Sound }, Player.position);
                 NetMessage.SendData(MessageID.Dodge, -1, -1, null, Player.whoAmI, 2f);
@@ -177,7 +182,7 @@ namespace IsaacTrinkets.Common
             return false;
         }
 
-        // Broken Syringe
+        // Broken Syringe & Whip Worm
         public override void ModifyShootStats(Item item, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             if (speedBall)

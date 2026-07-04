@@ -4,24 +4,16 @@ using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs
 {
-    public class RedPatchBuff : ModBuff
+    public class RedPatchBuff : TrinketBuff
     {
-        public override bool RightClick(int buffIndex)
+        public override bool GetTrinketBool(Player player)
         {
-            return false;
+            return player.GetModPlayer<TrinketPlayer>().redPatchAcc;
         }
 
-        public override void Update(Player player, ref int buffIndex)
+        public override void BuffEffect(Player player)
         {
-            if (player.GetModPlayer<TrinketPlayer>().redPatchAcc)
-            {
-                player.GetDamage(DamageClass.Generic) += 0.2f;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            player.GetDamage(DamageClass.Generic) += 0.2f;
         }
     }
 }
