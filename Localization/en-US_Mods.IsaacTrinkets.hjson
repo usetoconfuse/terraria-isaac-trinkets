@@ -220,6 +220,15 @@ Items: {
 			'''
 			Total NPC happiness increases luck
 			'Karma up'
+      '''
+  }
+  
+	RedPatch: {
+		DisplayName: Red Patch
+		Tooltip:
+			'''
+			Occasionally increases damage after being hit
+			'Your rage grows'
 			'''
 	}
 }
@@ -270,5 +279,10 @@ Buffs: {
 	SynthoilBuff: {
 		DisplayName: Synthoil
 		Description: Increased damage and crit chance
+	}
+
+	RedPatchBuff: {
+		DisplayName: Red Patch
+		Description: Increased damage
 	}
 }
