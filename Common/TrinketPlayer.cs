@@ -85,7 +85,7 @@ namespace IsaacTrinkets.Common
             if (brokenSyringeAcc && brokenSyringeActiveTimer == 0 && Main.rand.NextBool(1000))
             {
                 int randomBuffIndex = Main.rand.Next(5);
-                int randomDuration = (int)(60f * (float)Main.rand.Next(60, 120) * 0.1f);
+                int randomDuration = Main.rand.Next(360, 720);
                 switch (randomBuffIndex)
                 {
                     case 0:
