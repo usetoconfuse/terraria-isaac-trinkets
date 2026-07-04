@@ -4,113 +4,56 @@ using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs
 {
-    public class AdrenalineBuff : ModBuff
+    public abstract class BrokenSyringeBuff : TrinketBuff
     {
-        public override bool RightClick(int buffIndex)
+        public override bool GetTrinketBool(Player player)
         {
-            return false;
-        }
-
-        public override void Update(Player player, ref int buffIndex)
-        {
-            if (player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc)
-            {
-                float missingLifePercentage = 1 - ((float)player.statLife / (float)player.statLifeMax2);
-                player.GetDamage(DamageClass.Generic) += 0.2f * missingLifePercentage * missingLifePercentage;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            return player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc;
         }
     }
 
-    public class GrowthHormonesBuff : ModBuff
+    public class AdrenalineBuff : BrokenSyringeBuff
     {
-        public override bool RightClick(int buffIndex)
+        public override void BuffEffect(Player player)
         {
-            return false;
-        }
-
-        public override void Update(Player player, ref int buffIndex)
-        {
-            if (player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc)
-            {
-                player.GetDamage(DamageClass.Generic) += 0.05f;
-                player.moveSpeed += 0.05f;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            float missingLifePercentage = 1 - ((float)player.statLife / (float)player.statLifeMax2);
+            player.GetDamage(DamageClass.Generic) += 0.2f * missingLifePercentage * missingLifePercentage;
         }
     }
 
-    public class RoidRageBuff : ModBuff
+    public class GrowthHormonesBuff : BrokenSyringeBuff
     {
-        public override bool RightClick(int buffIndex)
+        public override void BuffEffect(Player player)
         {
-            return false;
-        }
-
-        public override void Update(Player player, ref int buffIndex)
-        {
-            if (player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc)
-            {
-                player.GetAttackSpeed(DamageClass.Melee) += 0.1f;
-                player.moveSpeed += 0.1f;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            player.GetDamage(DamageClass.Generic) += 0.05f;
+            player.moveSpeed += 0.05f;
         }
     }
 
-    public class SpeedBallBuff : ModBuff
+    public class RoidRageBuff : BrokenSyringeBuff
     {
-        public override bool RightClick(int buffIndex)
+        public override void BuffEffect(Player player)
         {
-            return false;
+            player.GetAttackSpeed(DamageClass.Melee) += 0.1f;
+            player.moveSpeed += 0.1f;
         }
+    }
 
-        public override void Update(Player player, ref int buffIndex)
+    public class SpeedBallBuff : BrokenSyringeBuff
+    {
+        public override void BuffEffect(Player player)
         {
-            if (player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc)
-            {
-                player.GetModPlayer<TrinketPlayer>().speedBall = true;
-                player.moveSpeed += 0.1f;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            player.GetModPlayer<TrinketPlayer>().speedBall = true;
+            player.moveSpeed += 0.1f;
         }
     }
     
-    public class SynthoilBuff : ModBuff
+    public class SynthoilBuff : BrokenSyringeBuff
 	{
-        public override bool RightClick(int buffIndex)
+        public override void BuffEffect(Player player)
         {
-            return false;
-        }
-
-        public override void Update(Player player, ref int buffIndex)
-        {
-            if (player.GetModPlayer<TrinketPlayer>().brokenSyringeAcc)
-            {
-                player.GetDamage(DamageClass.Generic) += 0.05f;
-                player.GetCritChance(DamageClass.Generic) += 5;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            player.GetDamage(DamageClass.Generic) += 0.05f;
+            player.GetCritChance(DamageClass.Generic) += 5;
         }
 	}
 }

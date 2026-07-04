@@ -4,29 +4,21 @@ using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Content.Buffs
 {
-	public class WoodenCrossBuff : ModBuff
+	public class WoodenCrossBuff : TrinketBuff
 	{
-        public override bool RightClick(int buffIndex)
-        {
-            return false;
-        }
-
         public override void SetStaticDefaults()
         {
             Main.buffNoTimeDisplay[Type] = true;
         }
 
-        public override void Update(Player player, ref int buffIndex)
+        public override bool GetTrinketBool(Player player)
         {
-            if (player.GetModPlayer<TrinketPlayer>().woodenCrossAcc)
-            {
-                player.GetModPlayer<TrinketPlayer>().woodenCrossDodge = true;
-            }
-            else
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
-            }
+            return player.GetModPlayer<TrinketPlayer>().woodenCrossAcc;
+        }
+
+        public override void BuffEffect(Player player)
+        {
+            player.GetModPlayer<TrinketPlayer>().woodenCrossDodge = true;
         }
 	}
 }

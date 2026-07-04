@@ -1,11 +1,11 @@
-﻿using IsaacTrinkets.Common;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace IsaacTrinkets.Content.Items
+namespace IsaacTrinkets.Common
 {
     public class TrinketGlobalItem : GlobalItem
     {
+        // Endless Nameless - chance to refund item consumption
         public override void OnConsumeItem(Item item, Player player)
         {
             if (player.GetModPlayer<TrinketPlayer>().endlessNamelessAcc && item.consumable)
@@ -17,6 +17,7 @@ namespace IsaacTrinkets.Content.Items
             }
         }
 
+        // Cracked Crown - Get equipped accessory prefixes
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
             player.GetModPlayer<TrinketPlayer>().crackedCrownPrefixList.Add(item.prefix);

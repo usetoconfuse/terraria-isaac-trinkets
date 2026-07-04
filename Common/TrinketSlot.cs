@@ -1,10 +1,8 @@
 ﻿using IsaacTrinkets.Content.Items;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.GameContent.Achievements;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.UI;
 
 namespace IsaacTrinkets.Common
 {
@@ -26,11 +24,13 @@ namespace IsaacTrinkets.Common
 			TrinketSlotText = Mod.GetLocalization($"{nameof(TrinketSlot)}.Trinket");
 		}
 		
+		// Prevent normal accessories from using the slot
 		public override bool CanAcceptItem(Item checkItem, AccessorySlotType context)
 		{
 			return TrinketItem.IsTrinket[checkItem.type];
 		}
 
+		// Right-clicking trinkets will equip them in the trinket slot
 		public override bool ModifyDefaultSwapSlot(Item item, int accSlotToSwapTo)
 		{
 			return TrinketItem.IsTrinket[item.type];

@@ -34,7 +34,7 @@ Items: {
 		DisplayName: Mother's Kiss
 		Tooltip:
 			'''
-			+50 max life
+			Increases maximum life
 			'HP up'
 			'''
 	}
@@ -71,7 +71,7 @@ Items: {
 		DisplayName: Cursed Skull
 		Tooltip:
 			'''
-			Teleport to a random location when a hit leaves you below 10% of your maximum life
+			Teleport to a random location when a hit leaves you below 10% life
 			'Cursed?'
 			'''
 	}
@@ -80,7 +80,7 @@ Items: {
 		DisplayName: Endless Nameless
 		Tooltip:
 			'''
-			Consumable items have a 10% chance not to be consumed on use
+			Consumable items are occasionally not consumed on use
 			'I'm stuck in a loop...'
 			'''
 	}
@@ -89,7 +89,8 @@ Items: {
 		DisplayName: Hairpin
 		Tooltip:
 			'''
-			Gain increased damage, critical strike chance and movement speed at the start of a boss fight
+			Gain increased damage, critical strike chance,
+			and movement speed when a boss is summoned
 			'Danger charge'
 			'''
 	}
@@ -128,7 +129,7 @@ Items: {
 		DisplayName: Brain Worm
 		Tooltip:
 			'''
-			50% chance for projectiles to redirect themselves towards enemies
+			Projectiles may redirect themselves towards enemies
 			'Ding!'
 			'''
 	}
@@ -220,9 +221,9 @@ Items: {
 			'''
 			Total NPC happiness increases luck
 			'Karma up'
-      '''
-  }
-  
+			'''
+	}
+
 	RedPatch: {
 		DisplayName: Red Patch
 		Tooltip:
@@ -258,7 +259,7 @@ Buffs: {
 
 	AdrenalineBuff: {
 		DisplayName: Adrenaline
-		Description: Increased damage scaling with missing life
+		Description: Missing life increases damage
 	}
 
 	GrowthHormonesBuff: {
