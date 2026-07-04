@@ -48,9 +48,24 @@ namespace IsaacTrinkets.Common
             stemCellAcc = false;
         }
 
+        public override void PreUpdate()
+        {
+            // Cooldowns or timers should be decremented here
+
+            if (woodenCrossDodgeTimer > 0)
+            {
+                woodenCrossDodgeTimer--;
+            }
+
+            if (brokenSyringeActiveTimer > 0)
+            {
+                brokenSyringeActiveTimer--;
+            }
+        }
         public override void PostUpdateBuffs()
         {
-            // Buff-related trinkets should be set to false here
+            // Buff-related trinket booleans should be set to false here
+
             redPatchAcc = false;
             hairpinAcc = false;
 
@@ -78,12 +93,6 @@ namespace IsaacTrinkets.Common
                 }
                 Player.AddBuff(ModContent.BuffType<WoodenCrossBuff>(), woodenCrossDodgeTimer);
             }
-
-            if (woodenCrossDodgeTimer > 0)
-            {
-                woodenCrossDodgeTimer--;
-            }
-            
             woodenCrossAcc = false;
 
             // Broken Syringe
@@ -110,10 +119,6 @@ namespace IsaacTrinkets.Common
                         break;
                 }
                 brokenSyringeActiveTimer = randomDuration;
-            }
-            if (brokenSyringeActiveTimer > 0)
-            {
-                brokenSyringeActiveTimer--;
             }
             brokenSyringeAcc = false;
         }
