@@ -6,7 +6,6 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 {
     public class RedPatch : TrinketItem
     {
-        // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
         public override void SetDefaults()
         {
             base.SetDefaults();
