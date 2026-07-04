@@ -200,7 +200,7 @@ Items: {
 		DisplayName: Red Patch
 		Tooltip:
 			'''
-			Has a chance to temporarily increase your damage upon being hit.
+			Occasionally increases damage after being hit
 			'Your rage grows'
 			'''
 	}
@@ -255,7 +255,7 @@ Buffs: {
 	}
 
 	RedPatchBuff: {
-		DisplayName: Red Patch Buff
+		DisplayName: Red Patch
 		Description: Increased damage
 	}
 }
