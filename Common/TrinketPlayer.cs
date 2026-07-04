@@ -18,6 +18,7 @@ namespace IsaacTrinkets.Common
         public bool cursedSkullAcc;
         public bool endlessNamelessAcc;
         public bool hairpinAcc;
+        public bool redPatchAcc;
         public bool brainWormAcc;
         public bool oldCapacitorAcc;
         public bool woodenCrossAcc;
@@ -147,12 +148,21 @@ namespace IsaacTrinkets.Common
                     Main.projectile[num4].Kill();
                 }
             }
-            
+
             // Cursed Skull
             if (cursedSkullAcc && Player.statLife < Player.statLifeMax2 * 0.1f)
             {
                 Player.TeleportationPotion();
                 SoundEngine.PlaySound(new SoundStyle("IsaacTrinkets/Assets/Sounds/Teleport") with { Type = SoundType.Sound }, Player.position);
+            }
+
+            // Red Patch
+            if (redPatchAcc)
+            {
+                if (Main.rand.NextBool(10))
+                {
+                    Player.AddBuff(ModContent.BuffType<RedPatchBuff>(), 600);
+                }
             }
         }
 

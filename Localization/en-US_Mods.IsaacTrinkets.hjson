@@ -195,6 +195,15 @@ Items: {
 			'DMG up'
 			'''
 	}
+
+	RedPatch: {
+		DisplayName: Red Patch
+		Tooltip:
+			'''
+			Occasionally increases damage after being hit
+			'Your rage grows'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
@@ -243,5 +252,10 @@ Buffs: {
 	SynthoilBuff: {
 		DisplayName: Synthoil
 		Description: Increased damage and crit chance
+	}
+
+	RedPatchBuff: {
+		DisplayName: Red Patch
+		Description: Increased damage
 	}
 }
