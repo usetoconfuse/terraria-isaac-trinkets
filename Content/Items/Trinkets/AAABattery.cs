@@ -23,7 +23,9 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
+            recipe.AddRecipeGroup(nameof(ItemID.CopperBar), 6);
+            recipe.AddIngredient(ItemID.ManaCrystal);
+            recipe.AddIngredient(ItemID.Wire);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();
         }
