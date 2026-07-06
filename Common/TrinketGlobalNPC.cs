@@ -64,6 +64,7 @@ namespace IsaacTrinkets.Common
             }
         }
 
+        // Trinkets dropped by enemies / bosses
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
             switch (npc.type)
@@ -76,6 +77,27 @@ namespace IsaacTrinkets.Common
                     break;
                 case NPCID.DevourerHead or NPCID.DiggerHead or NPCID.DuneSplicerHead or NPCID.GiantWormHead or NPCID.TombCrawlerHead or 98:
                     npcLoot.Add(ItemDropRule.OneFromOptions(100, ModContent.ItemType<BrainWorm>(), ModContent.ItemType<WhipWorm>()));
+                    break;
+                case NPCID.BloodZombie or NPCID.Drippler:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RedPatch>(), 100));
+                    break;
+                case NPCID.FaceMonster or NPCID.Crimera:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Callus>(), 100));
+                    break;
+                case NPCID.CursedSkull or NPCID.GiantCursedSkull:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CursedSkull>(), 100));
+                    break;
+                case NPCID.MotherSlime:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MothersKiss>(), 100));
+                    break;
+                case NPCID.Demon:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CurvedHorn>(), 100));
+                    break;
+                case NPCID.RedDevil:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CurvedHorn>(), 50));
+                    break;
+                case NPCID.Corruptor:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LuckyToe>(), 100));
                     break;
             }
         }
