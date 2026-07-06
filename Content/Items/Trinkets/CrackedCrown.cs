@@ -148,13 +148,5 @@ namespace IsaacTrinkets.Content.Items.Trinkets
             string tooltip = String.Join(", ", tooltiplist.ToArray());
             tooltips.Insert(4, new TooltipLine(Mod, "Crown", tooltip));
         }
-
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
-            recipe.AddTile(TileID.TinkerersWorkbench);
-            recipe.Register();
-        }
     }
 }

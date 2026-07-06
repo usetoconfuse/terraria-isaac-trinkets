@@ -1,6 +1,8 @@
 using IsaacTrinkets.Content.Buffs;
+using IsaacTrinkets.Content.Items.Trinkets;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -57,6 +59,19 @@ namespace IsaacTrinkets.Common
             )
             {
                 Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star);
+            }
+        }
+
+        public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
+        {
+            switch (npc.type)
+            {
+                case NPCID.KingSlime:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CrackedCrown>(), 20));
+                    break;
+                case NPCID.BrainofCthulhu:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StemCell>(), 10));
+                    break;
             }
         }
 	}
