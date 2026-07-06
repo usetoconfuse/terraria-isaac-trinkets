@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using IsaacTrinkets.Content.Buffs;
 using IsaacTrinkets.Content.Items.Trinkets;
 using Terraria;
@@ -71,6 +73,9 @@ namespace IsaacTrinkets.Common
                     break;
                 case NPCID.BrainofCthulhu:
                     npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StemCell>(), 10));
+                    break;
+                case NPCID.DevourerHead or NPCID.DiggerHead or NPCID.DuneSplicerHead or NPCID.GiantWormHead or NPCID.TombCrawlerHead or 98:
+                    npcLoot.Add(ItemDropRule.OneFromOptions(100, ModContent.ItemType<BrainWorm>(), ModContent.ItemType<WhipWorm>()));
                     break;
             }
         }
