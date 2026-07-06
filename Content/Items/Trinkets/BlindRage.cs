@@ -24,8 +24,9 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
+            recipe.AddIngredient(ItemID.Blindfold);
             recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.AddCondition(Condition.InGraveyard);
             recipe.Register();
         }
 	}
