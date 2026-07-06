@@ -20,13 +20,5 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         {
             player.moveSpeed += 0.1f;
         }
-
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
-            recipe.AddTile(TileID.TinkerersWorkbench);
-            recipe.Register();
-        }
 	}
 }

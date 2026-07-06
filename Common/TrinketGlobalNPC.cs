@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using IsaacTrinkets.Content.Buffs;
 using IsaacTrinkets.Content.Items.Trinkets;
 using Terraria;
@@ -100,6 +98,26 @@ namespace IsaacTrinkets.Common
                     npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LuckyToe>(), 100));
                     break;
             }
+        }
+
+        public override void ModifyShop(NPCShop shop)
+        {
+            if (shop.NpcType == NPCID.BestiaryGirl)
+            {
+				shop.Add<GoatHoof>();
+			}
+			else if (shop.NpcType == NPCID.Cyborg)
+            {
+                shop.Add<OldCapacitor>();
+            }
+			else if (shop.NpcType == NPCID.Stylist)
+            {
+				shop.Add<Hairpin>(Condition.Hardmode);
+			}
+			else if (shop.NpcType == NPCID.Mechanic)
+            {
+				shop.Add<VibrantBulb>(Condition.MoonPhaseFull);
+			}
         }
 	}
 }
