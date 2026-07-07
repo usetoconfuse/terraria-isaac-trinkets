@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using IsaacTrinkets.Content.Buffs;
+using IsaacTrinkets.Content.Items.Trinkets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -202,6 +203,16 @@ namespace IsaacTrinkets.Common
             if (stemCellAcc)
             {
                 Player.lifeRegen += 2;
+            }
+        }
+
+        // Broken Syringe obtainted from fishing
+        public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
+        {
+            bool inWater = !attempt.inLava && !attempt.inHoney;
+            if (inWater && Main.bloodMoon && attempt.veryrare && Main.rand.Next(3) == 0)
+            {
+                itemDrop = ModContent.ItemType<BrokenSyringe>();
             }
         }
     }

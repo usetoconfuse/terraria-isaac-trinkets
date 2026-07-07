@@ -1,4 +1,7 @@
-﻿using Terraria;
+﻿using IsaacTrinkets.Content.Items.Trinkets;
+using Terraria;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace IsaacTrinkets.Common
@@ -14,6 +17,14 @@ namespace IsaacTrinkets.Common
                 {
                     item.stack += 1;
                 }
+            }
+        }
+
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
+        {
+            if (item.type == ItemID.CanOfWorms)
+            {
+                itemLoot.Add(ItemDropRule.OneFromOptionsNotScalingWithLuck(20, ModContent.ItemType<BrainWorm>(), ModContent.ItemType<WhipWorm>()));
             }
         }
 

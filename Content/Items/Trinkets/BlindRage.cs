@@ -12,7 +12,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = Item.buyPrice(silver: 1);
+            Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Blue;
         }
 
@@ -24,8 +24,9 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
+            recipe.AddIngredient(ItemID.Blindfold);
             recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.AddCondition(Condition.InGraveyard);
             recipe.Register();
         }
 	}

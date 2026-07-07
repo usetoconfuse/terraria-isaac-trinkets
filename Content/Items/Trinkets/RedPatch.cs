@@ -10,21 +10,13 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         {
             base.SetDefaults();
 
-            Item.value = Item.buyPrice(silver: 1);
+            Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Blue;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<TrinketPlayer>().redPatchAcc = true;
-        }
-
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
-            recipe.AddTile(TileID.TinkerersWorkbench);
-            recipe.Register();
         }
     }
 }

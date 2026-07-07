@@ -1,6 +1,8 @@
 using IsaacTrinkets.Content.Buffs;
+using IsaacTrinkets.Content.Items.Trinkets;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -58,6 +60,64 @@ namespace IsaacTrinkets.Common
             {
                 Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star);
             }
+        }
+
+        // Trinkets dropped by enemies / bosses
+        public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
+        {
+            switch (npc.type)
+            {
+                case NPCID.KingSlime:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CrackedCrown>(), 20));
+                    break;
+                case NPCID.BrainofCthulhu:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<StemCell>(), 10));
+                    break;
+                case NPCID.DevourerHead or NPCID.DiggerHead or NPCID.DuneSplicerHead or NPCID.GiantWormHead or NPCID.TombCrawlerHead or 98:
+                    npcLoot.Add(ItemDropRule.OneFromOptions(100, ModContent.ItemType<BrainWorm>(), ModContent.ItemType<WhipWorm>()));
+                    break;
+                case NPCID.BloodZombie or NPCID.Drippler:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<RedPatch>(), 100));
+                    break;
+                case NPCID.FaceMonster or NPCID.Crimera:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Callus>(), 100));
+                    break;
+                case NPCID.CursedSkull or NPCID.GiantCursedSkull:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CursedSkull>(), 100));
+                    break;
+                case NPCID.MotherSlime:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MothersKiss>(), 100));
+                    break;
+                case NPCID.Demon:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CurvedHorn>(), 100));
+                    break;
+                case NPCID.RedDevil:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CurvedHorn>(), 50));
+                    break;
+                case NPCID.Corruptor:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LuckyToe>(), 100));
+                    break;
+            }
+        }
+
+        public override void ModifyShop(NPCShop shop)
+        {
+            if (shop.NpcType == NPCID.BestiaryGirl)
+            {
+				shop.Add<GoatHoof>();
+			}
+			else if (shop.NpcType == NPCID.Cyborg)
+            {
+                shop.Add<OldCapacitor>();
+            }
+			else if (shop.NpcType == NPCID.Stylist)
+            {
+				shop.Add<Hairpin>(Condition.Hardmode);
+			}
+			else if (shop.NpcType == NPCID.Mechanic)
+            {
+				shop.Add<VibrantBulb>(Condition.MoonPhaseFull);
+			}
         }
 	}
 }
