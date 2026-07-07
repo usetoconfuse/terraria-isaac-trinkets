@@ -4,12 +4,8 @@ using Terraria.ID;
 
 namespace IsaacTrinkets.Content.Items.Trinkets
 {
-    // This is a basic item template.
-    // Please see tModLoader's ExampleMod for every other example:
-    // https://github.com/tModLoader/tModLoader/tree/stable/ExampleMod
     public class WatchBattery : TrinketItem
     {
-        // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.IsaacTrinkets.hjson' file.
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -19,12 +15,14 @@ namespace IsaacTrinkets.Content.Items.Trinkets
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            // Logic handled in TrinketGlobalNPC (OnKill)
             player.GetModPlayer<TrinketPlayer>().watchBatteryAcc = true;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
+            // Custom RecipeGroup for any watch in TrinketModSystem (AddRecipeGroups)
             recipe.AddRecipeGroup("IsaacTrinkets:AnyWatch");
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();

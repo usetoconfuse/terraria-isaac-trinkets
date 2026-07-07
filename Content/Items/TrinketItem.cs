@@ -42,9 +42,9 @@ namespace IsaacTrinkets.Content.Items
             return false;
         }
 
-		// Replace the "Equipable" tooltip text with "Trinket"
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
+			// Replace the "Equipable" tooltip text with "Trinket"
 			int equipableIndex = tooltips.FindIndex(line => line.Mod == "Terraria" && line.Name == "Equipable");
 			tooltips[equipableIndex].Hide();
 
@@ -57,11 +57,10 @@ namespace IsaacTrinkets.Content.Items
 
 		public override bool CanEquipAccessory(Player player, int slot, bool modded)
 		{
+			// Trinkets can only be equipped in the trinket slot
 			if (modded)
 			{
 				int trinketSlot = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<TrinketSlot>().Type, player).Type;
-
-				//Main.NewText("Modded slot: " + moddedSlot.ToString() + ", Selected slot: " + slot.ToString(), 255, 255, 255);
 
 				if (trinketSlot == slot)
 				{

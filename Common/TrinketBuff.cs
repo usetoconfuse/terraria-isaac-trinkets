@@ -12,6 +12,7 @@ namespace IsaacTrinkets.Common
 
         public override void Update(Player player, ref int buffIndex)
         {
+            // Remove the buff if the player no longer has the trinket equipped, otherwise apply effect
             if (GetTrinketBool(player))
             {
                 BuffEffect(player);

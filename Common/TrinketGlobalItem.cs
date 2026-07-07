@@ -8,9 +8,9 @@ namespace IsaacTrinkets.Common
 {
     public class TrinketGlobalItem : GlobalItem
     {
-        // Endless Nameless - chance to refund item consumption
         public override void OnConsumeItem(Item item, Player player)
         {
+            // Endless Nameless - chance to refund item consumption
             if (player.GetModPlayer<TrinketPlayer>().endlessNamelessAcc && item.consumable)
             {
                 if (Main.rand.NextBool(10))
@@ -22,15 +22,16 @@ namespace IsaacTrinkets.Common
 
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
+            // Worm Trinkets - Can of Worms drop
             if (item.type == ItemID.CanOfWorms)
             {
                 itemLoot.Add(ItemDropRule.OneFromOptionsNotScalingWithLuck(20, ModContent.ItemType<BrainWorm>(), ModContent.ItemType<WhipWorm>()));
             }
         }
 
-        // Cracked Crown - Get equipped accessory prefixes
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
+            // Cracked Crown - Get equipped accessory prefixes
             player.GetModPlayer<TrinketPlayer>().crackedCrownPrefixList.Add(item.prefix);
         }
     }

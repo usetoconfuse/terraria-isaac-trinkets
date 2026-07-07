@@ -124,9 +124,9 @@ namespace IsaacTrinkets.Common
             brokenSyringeAcc = false;
         }
 
-        // Wooden Cross
         public override bool ConsumableDodge(Player.HurtInfo info)
         {
+            // Wooden Cross
             if
             (
                 !Player.immune
@@ -177,9 +177,9 @@ namespace IsaacTrinkets.Common
             }
         }
 
-        // Prevent instant damage from damaging tiles with callus
         public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable)
         {
+            // Callus - Prevent instant damage from damaging tiles
             if (callusAcc && damageSource.SourceOtherIndex == 3)
             {
                 return true;
@@ -188,27 +188,27 @@ namespace IsaacTrinkets.Common
             return false;
         }
 
-        // Broken Syringe & Whip Worm
         public override void ModifyShootStats(Item item, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
+            // Broken Syringe & Whip Worm
             if (speedBall)
             {
                 velocity *= 1.3f;
             }
         }
 
-        // Stem Cell
         public override void UpdateLifeRegen()
         {
+            // Stem Cell
             if (stemCellAcc)
             {
                 Player.lifeRegen += 2;
             }
         }
 
-        // Broken Syringe obtainted from fishing
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
+            // Broken Syringe obtainted from fishing
             bool inWater = !attempt.inLava && !attempt.inHoney;
             if (inWater && Main.bloodMoon && attempt.veryrare && Main.rand.Next(3) == 0)
             {

@@ -3,7 +3,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using IsaacTrinkets.Content.Items.Trinkets;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace IsaacTrinkets.Common
 {
@@ -55,7 +54,7 @@ namespace IsaacTrinkets.Common
 							}
 						}
 					}
-					// Shadow Chest - Endless Nameless
+					// Locked Shadow Chest - Endless Nameless
 					else if (chestTile.TileFrameX == 4 * 36)
 					{
 

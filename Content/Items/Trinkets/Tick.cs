@@ -11,10 +11,12 @@ namespace IsaacTrinkets.Content.Items.Trinkets
             base.SetDefaults();
             Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Red;
+            // Cannot currently be obtained without cheats as dequip prevention is unimplemented.
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            // Logic handled in TrinketGlobalNPC (OnSpawn)
             player.GetModPlayer<TrinketPlayer>().tickAcc = true;
         }
     }
