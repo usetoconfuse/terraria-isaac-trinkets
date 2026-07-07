@@ -10,10 +10,9 @@ namespace IsaacTrinkets.Common
 {
 	public class TrinketGlobalNPC : GlobalNPC
 	{
-
-        // Hairpin & Tick
 		public override void OnSpawn(NPC npc, IEntitySource source)
 		{
+            // Hairpin & Tick
 			if (npc.boss)
 			{
 				foreach (Player player in Main.ActivePlayers)
@@ -30,9 +29,9 @@ namespace IsaacTrinkets.Common
 			}
 		}
 
-        // Watch Battery
 		public override void OnKill(NPC npc)
 		{
+            // Watch Battery
 			Player closestPlayer = Main.player[Player.FindClosest(npc.position, npc.width, npc.height)];
 
             if
@@ -46,9 +45,9 @@ namespace IsaacTrinkets.Common
             }
         }
 
-        // Old Capacitor
         public override void OnHitByProjectile(NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone)
         {
+            // Old Capacitor
             Player player = Main.player[projectile.owner];
             if
             (
@@ -62,9 +61,9 @@ namespace IsaacTrinkets.Common
             }
         }
 
-        // Trinkets dropped by enemies / bosses
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
+            // Trinkets dropped by enemies / bosses
             switch (npc.type)
             {
                 case NPCID.KingSlime:
@@ -102,6 +101,7 @@ namespace IsaacTrinkets.Common
 
         public override void ModifyShop(NPCShop shop)
         {
+            // Trinkets sold by NPCs
             if (shop.NpcType == NPCID.BestiaryGirl)
             {
 				shop.Add<GoatHoof>();
