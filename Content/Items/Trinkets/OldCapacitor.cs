@@ -13,7 +13,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = Item.buyPrice(silver: 1);
+            Item.value = Item.buyPrice(gold: 20);
             Item.rare = ItemRarityID.Blue;
         }
 

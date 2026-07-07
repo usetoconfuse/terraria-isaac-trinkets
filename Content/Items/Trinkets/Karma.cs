@@ -11,7 +11,7 @@ namespace IsaacTrinkets.Content.Items.Trinkets
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = Item.buyPrice(silver: 1);
+            Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Blue;
             ItemID.Sets.ShimmerTransformToItem[ItemID.GuideVoodooDoll] = Type;
         }
