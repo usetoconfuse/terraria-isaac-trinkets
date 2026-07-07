@@ -27,13 +27,5 @@ namespace IsaacTrinkets.Content.Items.Trinkets
                 Main.instance.SpelunkerProjectileHelper.AddSpotToCheck(player.Center);
             }
         }
-
-        public override void AddRecipes()
-        {
-            Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
-            recipe.AddTile(TileID.TinkerersWorkbench);
-            recipe.Register();
-        }
     }
 }
