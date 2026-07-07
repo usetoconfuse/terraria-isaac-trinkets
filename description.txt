@@ -1,5 +1,5 @@
-This mod adds 20 Trinkets from The Binding of Isaac, accompanied by a unique Trinket slot to place them in.
+This mod adds 24 unique trinkets from The Binding of Isaac: Rebirth, accompanied by a new Trinket slot to equip them next to the player's accessory slots.
 
-Trinkets can be crafted at a Tinkerer's Workshop with 10 iron or lead bars.
+Each trinket pays homage to their original effect in Isaac, adapted for Terraria's mechanics where necessary.
 
-Originally made for the first official tModLoader Mod Jam, with the theme 'Game Tribute'.
+Originally developed for the first official tModLoader Mod Jam, with the theme 'Game Tribute'.

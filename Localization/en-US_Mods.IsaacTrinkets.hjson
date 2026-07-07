@@ -1,127 +1,21 @@
 # This file will automatically update with entries for new content after a build and reload.
 
 Items: {
-	ShinyRock: {
-		DisplayName: Shiny Rock
-		Tooltip:
-			'''
-			Exposes nearby treasure
-			'It shines for its brothers'
-			'''
-	}
-
-	VibrantBulb: {
-		DisplayName: Vibrant Bulb
-		Tooltip:
-			'''
-			Minor increase to defense, damage, crit chance,
-			movement speed and luck while at max life
-			'It needs power'
-			'''
-	}
-
-	DimBulb: {
-		DisplayName: Dim Bulb
-		Tooltip:
-			'''
-			Major increase to defense, damage, crit chance,
-			movement speed and luck while below 25% life
-			'I think it's broken'
-			'''
-	}
-
-	MothersKiss: {
-		DisplayName: Mother's Kiss
-		Tooltip:
-			'''
-			Increases maximum life
-			'HP up'
-			'''
-	}
-
 	AAABattery: {
 		DisplayName: AAA Battery
 		Tooltip:
 			'''
-			Slightly increases mana regeneration
+			Slightly increases mana regeneration rate
 			'Trickle charge'
 			'''
 	}
 
-	WatchBattery: {
-		DisplayName: Watch Battery
+	BlindRage: {
+		DisplayName: Blind Rage
 		Tooltip:
 			'''
-			Enemies drop more mana stars
-			'Lil charge'
-			'''
-	}
-
-	Callus: {
-		DisplayName: Callus
-		Tooltip:
-			'''
-			Prevents damage from spiky objects
-			Does not prevent bleeding caused by spikes
-			'Your feet feel stronger'
-			'''
-	}
-
-	CursedSkull: {
-		DisplayName: Cursed Skull
-		Tooltip:
-			'''
-			Teleport to a random location when a hit leaves you below 10% life
-			'Cursed?'
-			'''
-	}
-
-	EndlessNameless: {
-		DisplayName: Endless Nameless
-		Tooltip:
-			'''
-			Consumable items are occasionally not consumed on use
-			'I'm stuck in a loop...'
-			'''
-	}
-
-	Hairpin: {
-		DisplayName: Hairpin
-		Tooltip:
-			'''
-			Gain increased damage, critical strike chance,
-			and movement speed when a boss is summoned
-			'Danger charge'
-			'''
-	}
-
-	OldCapacitor: {
-		DisplayName: Old Capacitor
-		Tooltip:
-			'''
-			Mana regen is disabled
-			Enemies have a chance to drop mana stars
-			when hit by a magic projectile
-			'Voltage starving'
-			'''
-	}
-
-	WoodenCross: {
-		DisplayName: Wooden Cross
-		Tooltip:
-			'''
-			Occasionally grants a holy shield that prevents
-			the next instance of damage taken
-			'My faith protects me'
-			'''
-	}
-
-	SwallowedM80: {
-		DisplayName: Swallowed M80
-		Tooltip:
-			'''
-			The holder explodes upon taking damage
-			'Bang!'
+			Increases length of invincibility after taking damage
+			'Blind to damage'
 			'''
 	}
 
@@ -143,6 +37,16 @@ Items: {
 			'''
 	}
 
+	Callus: {
+		DisplayName: Callus
+		Tooltip:
+			'''
+			Prevents damage from spiky objects
+			Does not prevent bleeding caused by spikes
+			'Your feet feel stronger'
+			'''
+	}
+
 	CrackedCrown: {
 		DisplayName: Cracked Crown
 		Tooltip:
@@ -152,39 +56,12 @@ Items: {
 			'''
 	}
 
-	Tick: {
-		DisplayName: Tick
+	CursedSkull: {
+		DisplayName: Cursed Skull
 		Tooltip:
 			'''
-			Bosses have 15% less health
-			'Well, that's not coming off'
-			'''
-	}
-
-	StemCell: {
-		DisplayName: Stem Cell
-		Tooltip:
-			'''
-			Slightly increases life regeneration
-			'Regen!'
-			'''
-	}
-
-	WhipWorm: {
-		DisplayName: Whip Worm
-		Tooltip:
-			'''
-			Increases projectile speed
-			'Wooosh!'
-			'''
-	}
-
-	LuckyToe: {
-		DisplayName: Lucky Toe
-		Tooltip:
-			'''
-			Increases luck
-			'Luck up!'
+			Teleport to a random location when a hit leaves you below 10% life
+			'Cursed?'
 			'''
 	}
 
@@ -197,12 +74,22 @@ Items: {
 			'''
 	}
 
-	BlindRage: {
-		DisplayName: Blind Rage
+	DimBulb: {
+		DisplayName: Dim Bulb
 		Tooltip:
 			'''
-			Increases length of invincibility after taking damage
-			'Blind to damage'
+			Major increase to defense, damage, crit chance,
+			movement speed and luck while below 25% life
+			'I think it's broken'
+			'''
+	}
+
+	EndlessNameless: {
+		DisplayName: Endless Nameless
+		Tooltip:
+			'''
+			Consumable items are occasionally not consumed on use
+			'I'm stuck in a loop...'
 			'''
 	}
 
@@ -215,12 +102,51 @@ Items: {
 			'''
 	}
 
+	Hairpin: {
+		DisplayName: Hairpin
+		Tooltip:
+			'''
+			Gain increased damage, critical strike chance,
+			and movement speed when a boss is summoned
+			'Danger charge'
+			'''
+	}
+
 	Karma: {
 		DisplayName: Karma
 		Tooltip:
 			'''
 			Total NPC happiness increases luck
 			'Karma up'
+			'''
+	}
+
+	LuckyToe: {
+		DisplayName: Lucky Toe
+		Tooltip:
+			'''
+			Increases luck
+			'Luck up!'
+			'''
+	}
+
+	MothersKiss: {
+		DisplayName: Mother's Kiss
+		Tooltip:
+			'''
+			Increases maximum life
+			'HP up'
+			'''
+	}
+
+	OldCapacitor: {
+		DisplayName: Old Capacitor
+		Tooltip:
+			'''
+			Mana regen is disabled
+			Enemies have a chance to drop mana stars
+			when hit by a magic projectile
+			'Voltage starving'
 			'''
 	}
 
@@ -232,14 +158,88 @@ Items: {
 			'Your rage grows'
 			'''
 	}
+
+	ShinyRock: {
+		DisplayName: Shiny Rock
+		Tooltip:
+			'''
+			Exposes nearby treasure
+			'It shines for its brothers'
+			'''
+	}
+
+	StemCell: {
+		DisplayName: Stem Cell
+		Tooltip:
+			'''
+			Slightly increases life regeneration
+			'Regen!'
+			'''
+	}
+
+	SwallowedM80: {
+		DisplayName: Swallowed M80
+		Tooltip:
+			'''
+			The holder explodes upon taking damage
+			'Bang!'
+			'''
+	}
+
+	Tick: {
+		DisplayName: Tick
+		Tooltip:
+			'''
+			Bosses have 15% less health
+			'Well, that's not coming off'
+			'''
+	}
+
+	VibrantBulb: {
+		DisplayName: Vibrant Bulb
+		Tooltip:
+			'''
+			Minor increase to defense, damage, crit chance,
+			movement speed and luck while at max life
+			'It needs power'
+			'''
+	}
+
+	WatchBattery: {
+		DisplayName: Watch Battery
+		Tooltip:
+			'''
+			Enemies drop more mana stars
+			'Lil charge'
+			'''
+	}
+
+	WhipWorm: {
+		DisplayName: Whip Worm
+		Tooltip:
+			'''
+			Increases projectile speed
+			'Wooosh!'
+			'''
+	}
+
+	WoodenCross: {
+		DisplayName: Wooden Cross
+		Tooltip:
+			'''
+			Occasionally grants a holy shield that prevents
+			the next instance of damage taken
+			'My faith protects me'
+			'''
+	}
 }
 
 TrinketSlot.Trinket: Trinket
 
 Buffs: {
-	VibrantBulbBuff: {
-		DisplayName: Vibrant Bulb
-		Description: Minor improvements to some stats
+	AdrenalineBuff: {
+		DisplayName: Adrenaline
+		Description: Missing life increases damage
 	}
 
 	DimBulbBuff: {
@@ -247,24 +247,19 @@ Buffs: {
 		Description: Major improvements to some stats
 	}
 
+	GrowthHormonesBuff: {
+		DisplayName: Growth Hormones
+		Description: Increased damage and movement speed
+	}
+
 	HairpinBuff: {
 		DisplayName: Hairpin
 		Description: Increased damage, crit chance, and movement speed
 	}
 
-	WoodenCrossBuff: {
-		DisplayName: Holy Shield
-		Description: You will dodge the next attack
-	}
-
-	AdrenalineBuff: {
-		DisplayName: Adrenaline
-		Description: Missing life increases damage
-	}
-
-	GrowthHormonesBuff: {
-		DisplayName: Growth Hormones
-		Description: Increased damage and movement speed
+	RedPatchBuff: {
+		DisplayName: Red Patch
+		Description: Increased damage
 	}
 
 	RoidRageBuff: {
@@ -282,8 +277,13 @@ Buffs: {
 		Description: Increased damage and crit chance
 	}
 
-	RedPatchBuff: {
-		DisplayName: Red Patch
-		Description: Increased damage
+	VibrantBulbBuff: {
+		DisplayName: Vibrant Bulb
+		Description: Minor improvements to some stats
+	}
+
+	WoodenCrossBuff: {
+		DisplayName: Holy Shield
+		Description: You will dodge the next attack
 	}
 }
