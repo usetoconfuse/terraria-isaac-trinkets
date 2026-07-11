@@ -18,5 +18,14 @@ namespace IsaacTrinkets.Content.Items.Trinkets
             // Logic handled in TrinketGlobalNPC (OnKill)
             player.GetModPlayer<TrinketPlayer>().childsHeartAcc = true;
         }
+
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.CrimsonHeart);
+            recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.AddCondition(Condition.InGraveyard);
+            recipe.Register();
+        }
 	}
 }
