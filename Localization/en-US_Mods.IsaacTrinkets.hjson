@@ -139,6 +139,15 @@ Items: {
 			'''
 	}
 
+	MomsLocket: {
+		DisplayName: Mom's Locket
+		Tooltip:
+			'''
+			Heart pickups heal more
+			'You feel her love'
+			'''
+	}
+
 	MothersKiss: {
 		DisplayName: Mother's Kiss
 		Tooltip:

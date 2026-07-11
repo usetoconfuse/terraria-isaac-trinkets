@@ -23,6 +23,7 @@ namespace IsaacTrinkets.Common
         public bool dimBulbAcc;
         public bool endlessNamelessAcc;
         public bool hairpinAcc;
+        public bool momsLocketAcc;
         public bool oldCapacitorAcc;
         public bool redPatchAcc;
         public bool speedBall;
@@ -43,6 +44,7 @@ namespace IsaacTrinkets.Common
             crackedCrownPrefixList = new List<int>();
             cursedSkullAcc = false;
             endlessNamelessAcc = false;
+            momsLocketAcc = false;
             oldCapacitorAcc = false;
             speedBall = false;
             stemCellAcc = false;
