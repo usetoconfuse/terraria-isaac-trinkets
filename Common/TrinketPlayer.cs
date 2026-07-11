@@ -18,6 +18,7 @@ namespace IsaacTrinkets.Common
         public int brokenSyringeActiveTimer;
         public bool callusAcc;
         public bool childsHeartAcc;
+        public bool counterfeitPennyAcc;
         public List<int> crackedCrownPrefixList;
         public bool cursedSkullAcc;
         public bool dimBulbAcc;
@@ -41,6 +42,7 @@ namespace IsaacTrinkets.Common
             brainWormAcc = false;
             callusAcc = false;
             childsHeartAcc = false;
+            counterfeitPennyAcc = false;
             crackedCrownPrefixList = new List<int>();
             cursedSkullAcc = false;
             endlessNamelessAcc = false;

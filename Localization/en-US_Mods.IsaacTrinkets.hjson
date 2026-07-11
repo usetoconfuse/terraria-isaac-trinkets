@@ -56,6 +56,15 @@ Items: {
 			'''
 	}
 
+	CounterfeitPenny: {
+		DisplayName: Counterfeit Penny
+		Tooltip:
+			'''
+			Enemies drop more coins
+			'Wealth of wealth'
+			'''
+	}
+
 	CrackedCrown: {
 		DisplayName: Cracked Crown
 		Tooltip:
