@@ -47,6 +47,15 @@ Items: {
 			'''
 	}
 
+	ChildsHeart: {
+		DisplayName: Child's Heart
+		Tooltip:
+			'''
+			Enemies drop more hearts
+			'It calls out to its brothers'
+			'''
+	}
+
 	CrackedCrown: {
 		DisplayName: Cracked Crown
 		Tooltip:

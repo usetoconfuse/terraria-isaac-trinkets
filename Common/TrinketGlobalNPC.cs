@@ -31,9 +31,9 @@ namespace IsaacTrinkets.Common
 
 		public override void OnKill(NPC npc)
 		{
-            // Watch Battery
 			Player closestPlayer = Main.player[Player.FindClosest(npc.position, npc.width, npc.height)];
 
+            // Watch Battery
             if
             (
                 Main.rand.NextBool(2)
@@ -42,6 +42,17 @@ namespace IsaacTrinkets.Common
             )
             {
                 Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star);
+            }
+
+            // Child's Heart
+            if
+            (
+                Main.rand.NextBool(3)
+                && closestPlayer.statLife < closestPlayer.statLifeMax2
+                && closestPlayer.GetModPlayer<TrinketPlayer>().childsHeartAcc
+            )
+            {
+                Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Heart);
             }
         }
 
