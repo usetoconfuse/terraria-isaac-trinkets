@@ -17,6 +17,7 @@ namespace IsaacTrinkets.Common
         public bool brokenSyringeAcc;
         public int brokenSyringeActiveTimer;
         public bool callusAcc;
+        public bool cancerAcc;
         public bool childsHeartAcc;
         public bool counterfeitPennyAcc;
         public List<int> crackedCrownPrefixList;
@@ -41,6 +42,7 @@ namespace IsaacTrinkets.Common
         {
             brainWormAcc = false;
             callusAcc = false;
+            cancerAcc = false;
             childsHeartAcc = false;
             counterfeitPennyAcc = false;
             crackedCrownPrefixList = new List<int>();
@@ -221,6 +223,17 @@ namespace IsaacTrinkets.Common
             {
                 itemDrop = ModContent.ItemType<BrokenSyringe>();
             }
+        }
+
+        public override float UseSpeedMultiplier(Item item)
+        {
+            // Cancer
+            float multiplier = base.UseSpeedMultiplier(item);
+            if (cancerAcc && item.damage != 0)
+            {
+                multiplier *= 1.1f;
+            }
+            return multiplier;
         }
     }
 }

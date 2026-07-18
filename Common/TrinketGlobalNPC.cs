@@ -116,6 +116,9 @@ namespace IsaacTrinkets.Common
                     npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CurvedHorn>(), 50));
                     break;
                 case NPCID.Corruptor:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Cancer>(), 100));
+                    break;
+                case NPCID.Frankenstein or NPCID.Fritz:
                     npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LuckyToe>(), 100));
                     break;
             }

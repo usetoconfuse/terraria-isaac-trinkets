@@ -47,6 +47,15 @@ Items: {
 			'''
 	}
 
+	Cancer: {
+		DisplayName: Cancer
+		Tooltip:
+			'''
+			Increases weapon use speed
+			'Yay, cancer!'
+			'''
+	}
+
 	ChildsHeart: {
 		DisplayName: Child's Heart
 		Tooltip:
