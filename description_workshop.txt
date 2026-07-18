@@ -1,8 +1,8 @@
-This mod adds 24 unique trinkets from The Binding of Isaac: Rebirth, accompanied by a new Trinket slot to equip them next to the player's accessory slots.
+This mod adds 28 unique trinkets from The Binding of Isaac: Rebirth, accompanied by a new Trinket slot to equip them next to the player's accessory slots.
 
-Each trinket pays homage to their original effect in Isaac, adapted for Terraria's mechanics where necessary.
+Each trinket pays homage to their original effect in Isaac, adapted for the world of Terraria.
 
-[h2] All Trinkets [/h2]
+[h2] All Trinkets - Version 0.4 [/h2]
 
 [table]
 [tr]
@@ -34,6 +34,21 @@ Each trinket pays homage to their original effect in Isaac, adapted for Terraria
 	[td]Callus[/td]
 	[td]Prevents damage from spiky objects[/td]
 	[td]Rare drop from some Crimson enemies[/td]
+[/tr]
+[tr]
+	[td]Cancer[/td]
+	[td]Increases weapon use speed[/td]
+	[td]Rare drop from some Corruptors[/td]
+[/tr]
+[tr]
+	[td]Child's Heart[/td]
+	[td]Enemies drop more hearts[/td]
+	[td]Crafted using a Crimson Heart[/td]
+[/tr]
+[tr]
+	[td]Counterfeit Penny[/td]
+	[td]Enemies drop more coins[/td]
+	[td]Sold by the Pirate at night[/td]
 [/tr]
 [tr]
 	[td]Cracked Crown[/td]
@@ -78,7 +93,12 @@ Each trinket pays homage to their original effect in Isaac, adapted for Terraria
 [tr]
 	[td]Lucky Toe[/td]
 	[td]Increases luck[/td]
-	[td]Rare drop from Corruptors[/td]
+	[td]Rare drop from Solar Eclipse enemies[/td]
+[/tr]
+[tr]
+	[td]Mom's Locket[/td]
+	[td]Heart pickups heal more[/td]
+	[td]Crafted using a Panic Necklace[/td]
 [/tr]
 [tr]
 	[td]Mother's Kiss[/td]

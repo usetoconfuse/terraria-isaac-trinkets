@@ -31,9 +31,29 @@ namespace IsaacTrinkets.Common
 
 		public override void OnKill(NPC npc)
 		{
-            // Watch Battery
 			Player closestPlayer = Main.player[Player.FindClosest(npc.position, npc.width, npc.height)];
 
+            // Child's Heart
+            if
+            (
+                Main.rand.NextBool(3)
+                && closestPlayer.statLife < closestPlayer.statLifeMax2
+                && closestPlayer.GetModPlayer<TrinketPlayer>().childsHeartAcc
+            )
+            {
+                Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Heart);
+            }
+
+            // Counterfeit Penny
+            if
+            (
+                closestPlayer.GetModPlayer<TrinketPlayer>().counterfeitPennyAcc
+            )
+            {
+                npc.value *= Main.rand.NextFloat(1.1f, 1.5f);
+            }
+
+            // Watch Battery
             if
             (
                 Main.rand.NextBool(2)
@@ -43,6 +63,8 @@ namespace IsaacTrinkets.Common
             {
                 Item.NewItem(npc.GetSource_Loot(), npc.getRect(), ItemID.Star);
             }
+
+            
         }
 
         public override void OnHitByProjectile(NPC npc, Projectile projectile, NPC.HitInfo hit, int damageDone)
@@ -94,6 +116,9 @@ namespace IsaacTrinkets.Common
                     npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CurvedHorn>(), 50));
                     break;
                 case NPCID.Corruptor:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Cancer>(), 100));
+                    break;
+                case NPCID.Frankenstein or NPCID.Fritz:
                     npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LuckyToe>(), 100));
                     break;
             }
@@ -110,13 +135,17 @@ namespace IsaacTrinkets.Common
             {
                 shop.Add<OldCapacitor>();
             }
-			else if (shop.NpcType == NPCID.Stylist)
-            {
-				shop.Add<Hairpin>(Condition.Hardmode);
-			}
 			else if (shop.NpcType == NPCID.Mechanic)
             {
 				shop.Add<VibrantBulb>(Condition.MoonPhaseFull);
+			}
+            else if (shop.NpcType == NPCID.Pirate)
+            {
+				shop.Add<CounterfeitPenny>(Condition.TimeNight);
+			}
+            else if (shop.NpcType == NPCID.Stylist)
+            {
+				shop.Add<Hairpin>(Condition.Hardmode);
 			}
         }
 	}

@@ -1,4 +1,5 @@
-﻿using IsaacTrinkets.Content.Items.Trinkets;
+﻿using System.Linq;
+using IsaacTrinkets.Content.Items.Trinkets;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -18,6 +19,17 @@ namespace IsaacTrinkets.Common
                     item.stack += 1;
                 }
             }
+        }
+
+        public override bool OnPickup(Item item, Player player)
+        {
+            // Mom's Locket - heart pickups heal more
+            int[] heartPickups = {ItemID.Heart, ItemID.CandyApple, ItemID.CandyCane};
+            if (player.GetModPlayer<TrinketPlayer>().momsLocketAcc && heartPickups.Contains(item.type))
+            {
+                player.Heal(20); // results in two separate healing texts - could improve by figuring out how to modify the initial amount
+            }
+            return base.OnPickup(item, player);
         }
 
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)

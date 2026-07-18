@@ -1,5 +1,5 @@
-This mod adds 24 unique trinkets from The Binding of Isaac: Rebirth, accompanied by a new Trinket slot to equip them next to the player's accessory slots.
+This mod adds 28 unique trinkets from The Binding of Isaac: Rebirth, accompanied by a new Trinket slot to equip them next to the player's accessory slots.
 
-Each trinket pays homage to their original effect in Isaac, adapted for Terraria's mechanics where necessary.
+Each trinket pays homage to their original effect in Isaac, adapted for the world of Terraria.
 
 Originally developed for the first official tModLoader Mod Jam, with the theme 'Game Tribute'.

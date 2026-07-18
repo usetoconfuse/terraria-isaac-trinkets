@@ -47,6 +47,33 @@ Items: {
 			'''
 	}
 
+	Cancer: {
+		DisplayName: Cancer
+		Tooltip:
+			'''
+			Increases weapon use speed
+			'Yay, cancer!'
+			'''
+	}
+
+	ChildsHeart: {
+		DisplayName: Child's Heart
+		Tooltip:
+			'''
+			Enemies drop more hearts
+			'It calls out to its brothers'
+			'''
+	}
+
+	CounterfeitPenny: {
+		DisplayName: Counterfeit Penny
+		Tooltip:
+			'''
+			Enemies drop more coins
+			'Wealth of wealth'
+			'''
+	}
+
 	CrackedCrown: {
 		DisplayName: Cracked Crown
 		Tooltip:
@@ -127,6 +154,15 @@ Items: {
 			'''
 			Increases luck
 			'Luck up!'
+			'''
+	}
+
+	MomsLocket: {
+		DisplayName: Mom's Locket
+		Tooltip:
+			'''
+			Heart pickups heal more
+			'You feel her love'
 			'''
 	}
 

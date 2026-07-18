@@ -12,41 +12,50 @@ namespace IsaacTrinkets.Common
 {
     public class TrinketPlayer : ModPlayer
     {
-        public bool vibrantBulbAcc;
-        public bool dimBulbAcc;
-        public bool watchBatteryAcc;
+        
+        public bool brainWormAcc;
+        public bool brokenSyringeAcc;
+        public int brokenSyringeActiveTimer;
         public bool callusAcc;
+        public bool cancerAcc;
+        public bool childsHeartAcc;
+        public bool counterfeitPennyAcc;
+        public List<int> crackedCrownPrefixList;
         public bool cursedSkullAcc;
+        public bool dimBulbAcc;
         public bool endlessNamelessAcc;
         public bool hairpinAcc;
-        public bool redPatchAcc;
-        public bool brainWormAcc;
+        public bool momsLocketAcc;
         public bool oldCapacitorAcc;
+        public bool redPatchAcc;
+        public bool speedBall;
+        public bool stemCellAcc;
+        public bool swallowedM80Acc;
+        public bool tickAcc;
+        public bool vibrantBulbAcc;
+        public bool watchBatteryAcc;
         public bool woodenCrossAcc;
         public bool woodenCrossDodge;
         public int woodenCrossDodgeTimer;
-        public bool swallowedM80Acc;
-        public bool brokenSyringeAcc;
-        public int brokenSyringeActiveTimer;
-        public bool speedBall;
-        public List<int> crackedCrownPrefixList;
-        public bool tickAcc;
-        public bool stemCellAcc;
 
         public override void ResetEffects()
         {
-            watchBatteryAcc = false;
+            brainWormAcc = false;
             callusAcc = false;
+            cancerAcc = false;
+            childsHeartAcc = false;
+            counterfeitPennyAcc = false;
+            crackedCrownPrefixList = new List<int>();
             cursedSkullAcc = false;
             endlessNamelessAcc = false;
-            brainWormAcc = false;
+            momsLocketAcc = false;
             oldCapacitorAcc = false;
-            woodenCrossDodge = false;
-            swallowedM80Acc = false;
             speedBall = false;
-            crackedCrownPrefixList = new List<int>();
-            tickAcc = false;
             stemCellAcc = false;
+            swallowedM80Acc = false;
+            tickAcc = false;
+            watchBatteryAcc = false;
+            woodenCrossDodge = false;
         }
 
         public override void PreUpdate()
@@ -65,24 +74,17 @@ namespace IsaacTrinkets.Common
         }
         public override void PostUpdateBuffs()
         {
-            // Buff-related trinket booleans should be set to false here
-
-            redPatchAcc = false;
-            hairpinAcc = false;
-
             // Vibrant Bulb
             if (vibrantBulbAcc && Player.statLife == Player.statLifeMax2)
             {
                 Player.AddBuff(ModContent.BuffType<VibrantBulbBuff>(), 60);
             }
-            vibrantBulbAcc = false;
 
             // Dim Bulb
             if (dimBulbAcc && Player.statLife < Player.statLifeMax2 * 0.25f)
             {
                 Player.AddBuff(ModContent.BuffType<DimBulbBuff>(), 60);
             }
-            dimBulbAcc = false;
 
             // Wooden Cross
             if (woodenCrossAcc && woodenCrossDodgeTimer == 0 && Player.shadowDodgeTimer == 0)
@@ -94,8 +96,7 @@ namespace IsaacTrinkets.Common
                 }
                 Player.AddBuff(ModContent.BuffType<WoodenCrossBuff>(), woodenCrossDodgeTimer);
             }
-            woodenCrossAcc = false;
-
+            
             // Broken Syringe
             if (brokenSyringeAcc && brokenSyringeActiveTimer == 0 && Main.rand.NextBool(1000))
             {
@@ -121,7 +122,15 @@ namespace IsaacTrinkets.Common
                 }
                 brokenSyringeActiveTimer = randomDuration;
             }
+
+            // Buff-related trinket booleans should be set to false here
             brokenSyringeAcc = false;
+            dimBulbAcc = false;
+            hairpinAcc = false;
+            redPatchAcc = false;
+            vibrantBulbAcc = false;
+            woodenCrossAcc = false;
+            
         }
 
         public override bool ConsumableDodge(Player.HurtInfo info)
@@ -214,6 +223,17 @@ namespace IsaacTrinkets.Common
             {
                 itemDrop = ModContent.ItemType<BrokenSyringe>();
             }
+        }
+
+        public override float UseSpeedMultiplier(Item item)
+        {
+            // Cancer
+            float multiplier = base.UseSpeedMultiplier(item);
+            if (cancerAcc && item.damage != 0)
+            {
+                multiplier *= 1.1f;
+            }
+            return multiplier;
         }
     }
 }
